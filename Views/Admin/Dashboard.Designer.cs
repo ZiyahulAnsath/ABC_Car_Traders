@@ -38,7 +38,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.btnManageParts = new Guna.UI2.WinForms.Guna2Button();
             this.btnManageVehicles = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
-            this.plDashboard = new System.Windows.Forms.Panel();
+            this.plAdminDashboard = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -283,16 +283,16 @@ namespace ABC_Car_Traders.Views.Admin
             this.btnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
-            // plDashboard
+            // plAdminDashboard
             // 
-            this.plDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
-            this.plDashboard.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("plDashboard.BackgroundImage")));
-            this.plDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.plDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.plDashboard.Location = new System.Drawing.Point(371, 60);
-            this.plDashboard.Name = "plDashboard";
-            this.plDashboard.Size = new System.Drawing.Size(1022, 666);
-            this.plDashboard.TabIndex = 6;
+            this.plAdminDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.plAdminDashboard.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("plAdminDashboard.BackgroundImage")));
+            this.plAdminDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.plAdminDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.plAdminDashboard.Location = new System.Drawing.Point(371, 60);
+            this.plAdminDashboard.Name = "plAdminDashboard";
+            this.plAdminDashboard.Size = new System.Drawing.Size(1022, 666);
+            this.plAdminDashboard.TabIndex = 6;
             // 
             // panel1
             // 
@@ -388,6 +388,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(54, 42);
             this.guna2ControlBox1.TabIndex = 1;
+            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // guna2ControlBox2
             // 
@@ -430,7 +431,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1393, 726);
-            this.Controls.Add(this.plDashboard);
+            this.Controls.Add(this.plAdminDashboard);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -451,7 +452,7 @@ namespace ABC_Car_Traders.Views.Admin
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel plDashboard;
+        private System.Windows.Forms.Panel plAdminDashboard;
         private Guna.UI2.WinForms.Guna2Button btnAdminLogout;
         private Guna.UI2.WinForms.Guna2Button btnManageAllReports;
         private Guna.UI2.WinForms.Guna2Button btnManageAllOrders;

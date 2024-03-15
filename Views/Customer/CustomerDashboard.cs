@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ABC_Car_Traders.Views.Admin;
 
 namespace ABC_Car_Traders.Views.Customer
 {
@@ -58,7 +59,14 @@ namespace ABC_Car_Traders.Views.Customer
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            AdminLoginForm login = new AdminLoginForm();
+            login.Show();
+        }
 
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

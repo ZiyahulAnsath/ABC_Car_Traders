@@ -19,8 +19,8 @@ namespace ABC_Car_Traders
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //string connectionString = "Data Source=LAPTOP-KGH138OG;Initial Catalog=abc_car_traders;Integrated Security=True";
-            //Application.Run(new LoginForm(connectionString));
-            Application.Run(new LoadingPage());
+            //Application.Run(new LoadingPage(connectionString));
+            Application.Run(new CustomerDashboard());
         }
     }
 }

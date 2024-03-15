@@ -12,9 +12,31 @@ namespace ABC_Car_Traders.Views.Admin
 {
     public partial class Dashboard : Form
     {
+        static Dashboard _obj;
+
+        public static Dashboard Instance
+        {
+            get
+            {
+                if (_obj == null)
+                {
+                    _obj = new Dashboard();
+                }
+                return _obj;
+            }
+        }
+
+        public Panel PnlContainer
+        {
+            get { return plAdminDashboard; }
+            set { plAdminDashboard = value; }
+        }
+
         public Dashboard()
         {
             InitializeComponent();
+
+            _obj = this;
             UC_MainDashboard uc = new UC_MainDashboard();
             addUserControl(uc);
         }
@@ -22,8 +44,8 @@ namespace ABC_Car_Traders.Views.Admin
         private void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
-            plDashboard.Controls.Clear();
-            plDashboard.Controls.Add(userControl);
+            plAdminDashboard.Controls.Clear();
+            plAdminDashboard.Controls.Add(userControl);
             userControl.BringToFront();
         }
 
@@ -69,10 +91,15 @@ namespace ABC_Car_Traders.Views.Admin
 
         private void btnAdminLogout_Click(object sender, EventArgs e)
         {
-            //oginForm redirectForm = new oginForm();
-            //this.Hide();
-            //redirectForm.Show();
+            this.Hide();
+            AdminLoginForm login = new AdminLoginForm();
+            login.Show();
             
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

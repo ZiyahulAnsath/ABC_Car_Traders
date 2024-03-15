@@ -149,6 +149,7 @@ namespace ABC_Car_Traders.Views.Customer
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(54, 42);
             this.guna2ControlBox1.TabIndex = 1;
+            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // guna2ControlBox2
             // 
@@ -406,6 +407,7 @@ namespace ABC_Car_Traders.Views.Customer
             this.Name = "CustomerDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerDashboard";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

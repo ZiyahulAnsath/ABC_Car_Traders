@@ -12,9 +12,9 @@ namespace ABC_Car_Traders.Controllers
     {
         private AdminRepository adminRepository;
 
-        public AdminController(string connectionString)
+        public AdminController()
         {
-            adminRepository = new AdminRepository(connectionString);
+            adminRepository = new AdminRepository();
         }
 
         public bool ValidateAdminLogin(string username, string password)

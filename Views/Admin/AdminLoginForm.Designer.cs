@@ -32,26 +32,26 @@ namespace ABC_Car_Traders.Views.Admin
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminLoginForm));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.guna2RadioButton1 = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rbCustomer = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rbAdmin = new Guna.UI2.WinForms.Guna2RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.lkForgotPass = new System.Windows.Forms.LinkLabel();
             this.btnSignupPage = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -65,23 +65,7 @@ namespace ABC_Car_Traders.Views.Admin
             // 
             // guna2Elipse1
             // 
-            this.guna2Elipse1.BorderRadius = 30;
             this.guna2Elipse1.TargetControl = this;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Cyan;
-            this.label1.Location = new System.Drawing.Point(294, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(872, 60);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Login Page";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -92,7 +76,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1341, 60);
-            this.panel1.TabIndex = 7;
+            this.panel1.TabIndex = 8;
             // 
             // tableLayoutPanel1
             // 
@@ -137,6 +121,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(54, 42);
             this.guna2ControlBox1.TabIndex = 4;
+            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // guna2ControlBox2
             // 
@@ -152,6 +137,21 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(54, 42);
             this.guna2ControlBox2.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Cyan;
+            this.label1.Location = new System.Drawing.Point(294, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(872, 60);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Login Page";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
@@ -171,12 +171,12 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2GradientPanel1.Controls.Add(this.groupBox1);
             this.guna2GradientPanel1.Controls.Add(this.panel2);
-            this.guna2GradientPanel1.Controls.Add(this.linkLabel3);
+            this.guna2GradientPanel1.Controls.Add(this.lkForgotPass);
             this.guna2GradientPanel1.Controls.Add(this.btnSignupPage);
             this.guna2GradientPanel1.Controls.Add(this.btnLogin);
-            this.guna2GradientPanel1.Controls.Add(this.guna2TextBox2);
+            this.guna2GradientPanel1.Controls.Add(this.txtPassword);
             this.guna2GradientPanel1.Controls.Add(this.label3);
-            this.guna2GradientPanel1.Controls.Add(this.guna2TextBox1);
+            this.guna2GradientPanel1.Controls.Add(this.txtUsername);
             this.guna2GradientPanel1.Controls.Add(this.label2);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.LightCyan;
@@ -186,7 +186,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1341, 688);
-            this.guna2GradientPanel1.TabIndex = 8;
+            this.guna2GradientPanel1.TabIndex = 9;
             // 
             // guna2HtmlLabel1
             // 
@@ -202,7 +202,7 @@ namespace ABC_Car_Traders.Views.Admin
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.guna2RadioButton1);
+            this.groupBox1.Controls.Add(this.rbCustomer);
             this.groupBox1.Controls.Add(this.rbAdmin);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold);
@@ -214,25 +214,25 @@ namespace ABC_Car_Traders.Views.Admin
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Must Be Choose The Role ";
             // 
-            // guna2RadioButton1
+            // rbCustomer
             // 
-            this.guna2RadioButton1.AutoSize = true;
-            this.guna2RadioButton1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton1.CheckedState.BorderThickness = 0;
-            this.guna2RadioButton1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton1.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2RadioButton1.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2RadioButton1.ForeColor = System.Drawing.Color.Lavender;
-            this.guna2RadioButton1.Location = new System.Drawing.Point(269, 39);
-            this.guna2RadioButton1.Name = "guna2RadioButton1";
-            this.guna2RadioButton1.Size = new System.Drawing.Size(131, 28);
-            this.guna2RadioButton1.TabIndex = 42;
-            this.guna2RadioButton1.Text = "Customer";
-            this.guna2RadioButton1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2RadioButton1.UncheckedState.BorderThickness = 2;
-            this.guna2RadioButton1.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton1.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rbCustomer.AutoSize = true;
+            this.rbCustomer.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbCustomer.CheckedState.BorderThickness = 0;
+            this.rbCustomer.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbCustomer.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rbCustomer.CheckedState.InnerOffset = -4;
+            this.rbCustomer.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbCustomer.ForeColor = System.Drawing.Color.Lavender;
+            this.rbCustomer.Location = new System.Drawing.Point(269, 39);
+            this.rbCustomer.Name = "rbCustomer";
+            this.rbCustomer.Size = new System.Drawing.Size(131, 28);
+            this.rbCustomer.TabIndex = 42;
+            this.rbCustomer.Text = "Customer";
+            this.rbCustomer.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rbCustomer.UncheckedState.BorderThickness = 2;
+            this.rbCustomer.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rbCustomer.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
             // rbAdmin
             // 
@@ -282,19 +282,19 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2PictureBox1.TabIndex = 2;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // linkLabel3
+            // lkForgotPass
             // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel3.ForeColor = System.Drawing.Color.SteelBlue;
-            this.linkLabel3.LinkColor = System.Drawing.Color.Lavender;
-            this.linkLabel3.Location = new System.Drawing.Point(1111, 462);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(123, 18);
-            this.linkLabel3.TabIndex = 38;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Forgot Password";
+            this.lkForgotPass.AutoSize = true;
+            this.lkForgotPass.BackColor = System.Drawing.Color.Transparent;
+            this.lkForgotPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lkForgotPass.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lkForgotPass.LinkColor = System.Drawing.Color.Lavender;
+            this.lkForgotPass.Location = new System.Drawing.Point(1111, 462);
+            this.lkForgotPass.Name = "lkForgotPass";
+            this.lkForgotPass.Size = new System.Drawing.Size(123, 18);
+            this.lkForgotPass.TabIndex = 38;
+            this.lkForgotPass.TabStop = true;
+            this.lkForgotPass.Text = "Forgot Password";
             // 
             // btnSignupPage
             // 
@@ -362,32 +362,32 @@ namespace ABC_Car_Traders.Views.Admin
             this.btnLogin.TextOffset = new System.Drawing.Point(-20, 0);
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // guna2TextBox2
+            // txtPassword
             // 
-            this.guna2TextBox2.AutoRoundedCorners = true;
-            this.guna2TextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox2.BorderRadius = 23;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold);
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox2.IconLeft")));
-            this.guna2TextBox2.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.guna2TextBox2.IconLeftSize = new System.Drawing.Size(35, 35);
-            this.guna2TextBox2.Location = new System.Drawing.Point(803, 398);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '*';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(431, 48);
-            this.guna2TextBox2.TabIndex = 3;
+            this.txtPassword.AutoRoundedCorners = true;
+            this.txtPassword.BackColor = System.Drawing.Color.Transparent;
+            this.txtPassword.BorderRadius = 23;
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassword.DefaultText = "";
+            this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
+            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtPassword.IconLeft")));
+            this.txtPassword.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtPassword.IconLeftSize = new System.Drawing.Size(35, 35);
+            this.txtPassword.Location = new System.Drawing.Point(803, 398);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.PlaceholderText = "";
+            this.txtPassword.SelectedText = "";
+            this.txtPassword.Size = new System.Drawing.Size(431, 48);
+            this.txtPassword.TabIndex = 3;
             // 
             // label3
             // 
@@ -401,33 +401,33 @@ namespace ABC_Car_Traders.Views.Admin
             this.label3.TabIndex = 2;
             this.label3.Text = "Password";
             // 
-            // guna2TextBox1
+            // txtUsername
             // 
-            this.guna2TextBox1.AutoRoundedCorners = true;
-            this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox1.BorderRadius = 23;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox1.IconLeft")));
-            this.guna2TextBox1.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2TextBox1.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.guna2TextBox1.IconLeftSize = new System.Drawing.Size(35, 35);
-            this.guna2TextBox1.Location = new System.Drawing.Point(803, 279);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(431, 48);
-            this.guna2TextBox1.TabIndex = 3;
+            this.txtUsername.AutoRoundedCorners = true;
+            this.txtUsername.BackColor = System.Drawing.Color.Transparent;
+            this.txtUsername.BorderRadius = 23;
+            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsername.DefaultText = "";
+            this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsername.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
+            this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsername.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtUsername.IconLeft")));
+            this.txtUsername.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.txtUsername.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtUsername.IconLeftSize = new System.Drawing.Size(35, 35);
+            this.txtUsername.Location = new System.Drawing.Point(803, 279);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.PasswordChar = '\0';
+            this.txtUsername.PlaceholderText = "";
+            this.txtUsername.SelectedText = "";
+            this.txtUsername.Size = new System.Drawing.Size(431, 48);
+            this.txtUsername.TabIndex = 3;
             // 
             // label2
             // 
@@ -473,23 +473,23 @@ namespace ABC_Car_Traders.Views.Admin
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2Button btnLogin;
-        private Guna.UI2.WinForms.Guna2Button btnSignupPage;
-        private System.Windows.Forms.LinkLabel linkLabel3;
-        private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2RadioButton rbAdmin;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private Guna.UI2.WinForms.Guna2RadioButton rbCustomer;
+        private Guna.UI2.WinForms.Guna2RadioButton rbAdmin;
+        private System.Windows.Forms.Panel panel2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.LinkLabel lkForgotPass;
+        private Guna.UI2.WinForms.Guna2Button btnSignupPage;
+        private Guna.UI2.WinForms.Guna2Button btnLogin;
+        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2TextBox txtUsername;
+        private System.Windows.Forms.Label label2;
     }
 }

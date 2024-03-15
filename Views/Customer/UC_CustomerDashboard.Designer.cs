@@ -36,11 +36,6 @@ namespace ABC_Car_Traders.Views.Customer
             this.label5 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox4 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.gpStatusCustomer = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox5 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.gpStatusParts = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.gpStatus = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -55,13 +50,6 @@ namespace ABC_Car_Traders.Views.Customer
             this.splitContainer2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).BeginInit();
-            this.gpStatusCustomer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
-            this.splitContainer3.Panel1.SuspendLayout();
-            this.splitContainer3.Panel2.SuspendLayout();
-            this.splitContainer3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).BeginInit();
             this.gpStatusParts.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.gpStatus.SuspendLayout();
@@ -158,7 +146,6 @@ namespace ABC_Car_Traders.Views.Customer
             // gpStatusCustomer
             // 
             this.gpStatusCustomer.BorderRadius = 25;
-            this.gpStatusCustomer.Controls.Add(this.splitContainer3);
             this.gpStatusCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gpStatusCustomer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
             this.gpStatusCustomer.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
@@ -168,88 +155,6 @@ namespace ABC_Car_Traders.Views.Customer
             this.gpStatusCustomer.Name = "gpStatusCustomer";
             this.gpStatusCustomer.Size = new System.Drawing.Size(388, 168);
             this.gpStatusCustomer.TabIndex = 11;
-            // 
-            // splitContainer3
-            // 
-            this.splitContainer3.BackColor = System.Drawing.Color.Transparent;
-            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer3.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer3.Margin = new System.Windows.Forms.Padding(0);
-            this.splitContainer3.Name = "splitContainer3";
-            // 
-            // splitContainer3.Panel1
-            // 
-            this.splitContainer3.Panel1.Controls.Add(this.tableLayoutPanel4);
-            this.splitContainer3.Panel1MinSize = 70;
-            // 
-            // splitContainer3.Panel2
-            // 
-            this.splitContainer3.Panel2.Controls.Add(this.guna2CirclePictureBox5);
-            this.splitContainer3.Panel2MinSize = 70;
-            this.splitContainer3.Size = new System.Drawing.Size(388, 168);
-            this.splitContainer3.SplitterDistance = 259;
-            this.splitContainer3.TabIndex = 0;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.label6, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.label7, 0, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.90476F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.09524F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(259, 168);
-            this.tableLayoutPanel4.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Azure;
-            this.label6.Location = new System.Drawing.Point(0, 103);
-            this.label6.Margin = new System.Windows.Forms.Padding(0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(259, 65);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "10";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Cyan;
-            this.label7.Location = new System.Drawing.Point(0, 0);
-            this.label7.Margin = new System.Windows.Forms.Padding(0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(259, 103);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "TOTAL CUSTOMERS";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // guna2CirclePictureBox5
-            // 
-            this.guna2CirclePictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2CirclePictureBox5.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox5.Image")));
-            this.guna2CirclePictureBox5.ImageRotate = 0F;
-            this.guna2CirclePictureBox5.Location = new System.Drawing.Point(0, 0);
-            this.guna2CirclePictureBox5.Name = "guna2CirclePictureBox5";
-            this.guna2CirclePictureBox5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox5.Size = new System.Drawing.Size(125, 168);
-            this.guna2CirclePictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox5.TabIndex = 0;
-            this.guna2CirclePictureBox5.TabStop = false;
-            this.guna2CirclePictureBox5.UseTransparentBackground = true;
             // 
             // gpStatusParts
             // 
@@ -407,14 +312,6 @@ namespace ABC_Car_Traders.Views.Customer
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).EndInit();
-            this.gpStatusCustomer.ResumeLayout(false);
-            this.splitContainer3.Panel1.ResumeLayout(false);
-            this.splitContainer3.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
-            this.splitContainer3.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).EndInit();
             this.gpStatusParts.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.gpStatus.ResumeLayout(false);
@@ -438,11 +335,6 @@ namespace ABC_Car_Traders.Views.Customer
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox4;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel gpStatusCustomer;
-        private System.Windows.Forms.SplitContainer splitContainer3;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox5;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel gpStatusParts;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel gpStatus;

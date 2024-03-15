@@ -29,46 +29,39 @@ namespace ABC_Car_Traders.Views.Admin
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_ManageCustomerDetailsForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_ManageCustomerDetailsForm));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.dgvCarDetails = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSearchCustomer = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnAddCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDeleteCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.dgvCustomerDetails = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCarDetails)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -92,13 +85,13 @@ namespace ABC_Car_Traders.Views.Admin
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0, 20, 0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1370, 60);
             this.panel1.TabIndex = 9;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
             this.panel2.Controls.Add(this.tableLayoutPanel2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 60);
@@ -108,6 +101,7 @@ namespace ABC_Car_Traders.Views.Admin
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
             this.tableLayoutPanel2.ColumnCount = 6;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.37018F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.08667F));
@@ -116,8 +110,8 @@ namespace ABC_Car_Traders.Views.Admin
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.94271F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.37018F));
             this.tableLayoutPanel2.Controls.Add(this.label, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnLogin, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.guna2TextBox2, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txtSearchCustomer, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnAddCustomer, 4, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -139,157 +133,66 @@ namespace ABC_Car_Traders.Views.Admin
             this.label.Text = "Search the Customer:";
             this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnLogin
+            // txtSearchCustomer
             // 
-            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
-            this.btnLogin.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.btnLogin.Location = new System.Drawing.Point(1017, 22);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(279, 50);
-            this.btnLogin.TabIndex = 27;
-            this.btnLogin.Text = "ADD NEW CUSTOMER";
-            this.btnLogin.UseVisualStyleBackColor = false;
+            this.txtSearchCustomer.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSearchCustomer.AutoRoundedCorners = true;
+            this.txtSearchCustomer.BackColor = System.Drawing.Color.Transparent;
+            this.txtSearchCustomer.BorderColor = System.Drawing.Color.DimGray;
+            this.txtSearchCustomer.BorderRadius = 23;
+            this.txtSearchCustomer.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchCustomer.DefaultText = "";
+            this.txtSearchCustomer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchCustomer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchCustomer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
+            this.txtSearchCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchCustomer.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtSearchCustomer.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSearchCustomer.HoverState.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSearchCustomer.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
+            this.txtSearchCustomer.IconLeftSize = new System.Drawing.Size(0, 0);
+            this.txtSearchCustomer.IconRight = ((System.Drawing.Image)(resources.GetObject("txtSearchCustomer.IconRight")));
+            this.txtSearchCustomer.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.txtSearchCustomer.IconRightOffset = new System.Drawing.Point(10, 0);
+            this.txtSearchCustomer.IconRightSize = new System.Drawing.Size(30, 30);
+            this.txtSearchCustomer.Location = new System.Drawing.Point(357, 23);
+            this.txtSearchCustomer.Margin = new System.Windows.Forms.Padding(0);
+            this.txtSearchCustomer.Name = "txtSearchCustomer";
+            this.txtSearchCustomer.PasswordChar = '\0';
+            this.txtSearchCustomer.PlaceholderText = "Search Here";
+            this.txtSearchCustomer.SelectedText = "";
+            this.txtSearchCustomer.Size = new System.Drawing.Size(389, 48);
+            this.txtSearchCustomer.TabIndex = 32;
+            this.txtSearchCustomer.TextChanged += new System.EventHandler(this.txtSearchCustomer_TextChanged);
             // 
-            // splitContainer1
+            // btnAddCustomer
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 154);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.tableLayoutPanel3);
-            this.splitContainer1.Panel1.Margin = new System.Windows.Forms.Padding(0, 20, 0, 0);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
-            this.splitContainer1.Size = new System.Drawing.Size(1370, 628);
-            this.splitContainer1.SplitterDistance = 444;
-            this.splitContainer1.TabIndex = 11;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.dgvCarDetails, 0, 1);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 3;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.293706F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.41259F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.293706F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1370, 444);
-            this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // dgvCarDetails
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvCarDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvCarDetails.BackgroundColor = System.Drawing.Color.Silver;
-            this.dgvCarDetails.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCarDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvCarDetails.ColumnHeadersHeight = 40;
-            this.dgvCarDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvCarDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCarDetails.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvCarDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCarDetails.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvCarDetails.Location = new System.Drawing.Point(3, 30);
-            this.dgvCarDetails.Name = "dgvCarDetails";
-            this.dgvCarDetails.RowHeadersVisible = false;
-            this.dgvCarDetails.RowHeadersWidth = 51;
-            this.dgvCarDetails.RowTemplate.Height = 24;
-            this.dgvCarDetails.Size = new System.Drawing.Size(1364, 382);
-            this.dgvCarDetails.TabIndex = 13;
-            this.dgvCarDetails.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvCarDetails.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvCarDetails.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvCarDetails.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvCarDetails.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvCarDetails.ThemeStyle.BackColor = System.Drawing.Color.Silver;
-            this.dgvCarDetails.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvCarDetails.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgvCarDetails.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgvCarDetails.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvCarDetails.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvCarDetails.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvCarDetails.ThemeStyle.HeaderStyle.Height = 40;
-            this.dgvCarDetails.ThemeStyle.ReadOnly = false;
-            this.dgvCarDetails.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvCarDetails.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvCarDetails.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvCarDetails.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvCarDetails.ThemeStyle.RowsStyle.Height = 24;
-            this.dgvCarDetails.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvCarDetails.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "No";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Name";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Mobile No";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Address";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Gender Type";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Username";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Password";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
+            this.btnAddCustomer.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddCustomer.AnimatedGIF = true;
+            this.btnAddCustomer.AutoRoundedCorners = true;
+            this.btnAddCustomer.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAddCustomer.BorderRadius = 31;
+            this.btnAddCustomer.BorderThickness = 2;
+            this.btnAddCustomer.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 4);
+            this.btnAddCustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddCustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddCustomer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
+            this.btnAddCustomer.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAddCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnAddCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
+            this.btnAddCustomer.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btnAddCustomer.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnAddCustomer.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
+            this.btnAddCustomer.Location = new System.Drawing.Point(1022, 15);
+            this.btnAddCustomer.Name = "btnAddCustomer";
+            this.btnAddCustomer.ShadowDecoration.Color = System.Drawing.Color.White;
+            this.btnAddCustomer.Size = new System.Drawing.Size(269, 64);
+            this.btnAddCustomer.TabIndex = 35;
+            this.btnAddCustomer.Text = "ADD NEW CUSTOMER";
             // 
             // groupBox1
             // 
@@ -322,7 +225,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.tableLayoutPanel4.Controls.Add(this.guna2Button2, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.guna2Button3, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.guna2Button4, 5, 0);
-            this.tableLayoutPanel4.Controls.Add(this.guna2Button5, 7, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnDeleteCustomer, 7, 0);
             this.tableLayoutPanel4.Controls.Add(this.guna2Button6, 9, 0);
             this.tableLayoutPanel4.Controls.Add(this.guna2Button7, 1, 2);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -341,7 +244,6 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button2.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button2.BorderRadius = 5;
             this.guna2Button2.BorderThickness = 2;
-            this.guna2Button2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.guna2Button2.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
             this.guna2Button2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
             this.guna2Button2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
@@ -354,6 +256,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button2.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.Black;
             this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button2.ImageOffset = new System.Drawing.Point(10, 0);
@@ -369,7 +272,6 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button3.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button3.BorderRadius = 5;
             this.guna2Button3.BorderThickness = 2;
-            this.guna2Button3.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.guna2Button3.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
             this.guna2Button3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
             this.guna2Button3.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
@@ -382,6 +284,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button3.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.guna2Button3.HoverState.FillColor = System.Drawing.Color.Black;
             this.guna2Button3.HoverState.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button3.ImageOffset = new System.Drawing.Point(10, 0);
@@ -397,7 +300,6 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button4.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button4.BorderRadius = 5;
             this.guna2Button4.BorderThickness = 2;
-            this.guna2Button4.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.guna2Button4.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
             this.guna2Button4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
             this.guna2Button4.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
@@ -410,6 +312,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button4.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button4.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.guna2Button4.HoverState.FillColor = System.Drawing.Color.Black;
             this.guna2Button4.HoverState.ForeColor = System.Drawing.Color.White;
             this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button4.ImageOffset = new System.Drawing.Point(10, 0);
@@ -420,33 +323,34 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button4.TabIndex = 29;
             this.guna2Button4.Text = "REPORT SELECTED CUSTOMER";
             // 
-            // guna2Button5
+            // btnDeleteCustomer
             // 
-            this.guna2Button5.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button5.BorderRadius = 5;
-            this.guna2Button5.BorderThickness = 2;
-            this.guna2Button5.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button5.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
-            this.guna2Button5.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Button5.FillColor = System.Drawing.Color.Empty;
-            this.guna2Button5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button5.HoverState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button5.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button5.ImageOffset = new System.Drawing.Point(10, 0);
-            this.guna2Button5.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button5.Location = new System.Drawing.Point(827, 3);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(234, 55);
-            this.guna2Button5.TabIndex = 29;
-            this.guna2Button5.Text = "DELETE SELECTED CUSTOMER";
+            this.btnDeleteCustomer.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDeleteCustomer.BorderRadius = 5;
+            this.btnDeleteCustomer.BorderThickness = 2;
+            this.btnDeleteCustomer.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.btnDeleteCustomer.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
+            this.btnDeleteCustomer.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
+            this.btnDeleteCustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteCustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeleteCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDeleteCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDeleteCustomer.FillColor = System.Drawing.Color.Empty;
+            this.btnDeleteCustomer.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteCustomer.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDeleteCustomer.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.btnDeleteCustomer.HoverState.FillColor = System.Drawing.Color.Black;
+            this.btnDeleteCustomer.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteCustomer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnDeleteCustomer.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnDeleteCustomer.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnDeleteCustomer.Location = new System.Drawing.Point(827, 3);
+            this.btnDeleteCustomer.Name = "btnDeleteCustomer";
+            this.btnDeleteCustomer.Size = new System.Drawing.Size(234, 55);
+            this.btnDeleteCustomer.TabIndex = 29;
+            this.btnDeleteCustomer.Text = "DELETE SELECTED CUSTOMER";
+            this.btnDeleteCustomer.Click += new System.EventHandler(this.btnDeleteCustomer_Click);
             // 
             // guna2Button6
             // 
@@ -454,7 +358,6 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button6.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button6.BorderRadius = 5;
             this.guna2Button6.BorderThickness = 2;
-            this.guna2Button6.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.guna2Button6.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
             this.guna2Button6.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
             this.guna2Button6.CustomBorderThickness = new System.Windows.Forms.Padding(6, 0, 0, 0);
@@ -467,6 +370,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button6.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button6.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.guna2Button6.HoverState.FillColor = System.Drawing.Color.Black;
             this.guna2Button6.HoverState.ForeColor = System.Drawing.Color.White;
             this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button6.ImageOffset = new System.Drawing.Point(10, 0);
@@ -482,7 +386,6 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button7.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button7.BorderRadius = 5;
             this.guna2Button7.BorderThickness = 2;
-            this.guna2Button7.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.guna2Button7.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
             this.guna2Button7.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
             this.guna2Button7.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
@@ -495,6 +398,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button7.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button7.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.guna2Button7.HoverState.FillColor = System.Drawing.Color.Black;
             this.guna2Button7.HoverState.ForeColor = System.Drawing.Color.White;
             this.guna2Button7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button7.ImageOffset = new System.Drawing.Point(10, 0);
@@ -505,38 +409,98 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button7.TabIndex = 29;
             this.guna2Button7.Text = "REPORT ALL CUSTOMERS";
             // 
-            // guna2TextBox2
+            // tableLayoutPanel3
             // 
-            this.guna2TextBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2TextBox2.AutoRoundedCorners = true;
-            this.guna2TextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.DimGray;
-            this.guna2TextBox2.BorderRadius = 23;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold);
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2TextBox2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
-            this.guna2TextBox2.IconLeftSize = new System.Drawing.Size(0, 0);
-            this.guna2TextBox2.IconRight = ((System.Drawing.Image)(resources.GetObject("guna2TextBox2.IconRight")));
-            this.guna2TextBox2.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2TextBox2.IconRightOffset = new System.Drawing.Point(10, 0);
-            this.guna2TextBox2.IconRightSize = new System.Drawing.Size(30, 30);
-            this.guna2TextBox2.Location = new System.Drawing.Point(357, 23);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "Search Here";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(389, 48);
-            this.guna2TextBox2.TabIndex = 32;
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.dgvCustomerDetails, 0, 1);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 3;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.293706F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.41259F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.293706F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1370, 444);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // dgvCustomerDetails
+            // 
+            this.dgvCustomerDetails.AllowUserToResizeColumns = false;
+            this.dgvCustomerDetails.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvCustomerDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvCustomerDetails.BackgroundColor = System.Drawing.Color.Silver;
+            this.dgvCustomerDetails.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCustomerDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvCustomerDetails.ColumnHeadersHeight = 40;
+            this.dgvCustomerDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCustomerDetails.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvCustomerDetails.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvCustomerDetails.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvCustomerDetails.Location = new System.Drawing.Point(3, 30);
+            this.dgvCustomerDetails.Name = "dgvCustomerDetails";
+            this.dgvCustomerDetails.RowHeadersVisible = false;
+            this.dgvCustomerDetails.RowHeadersWidth = 51;
+            this.dgvCustomerDetails.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvCustomerDetails.RowTemplate.Height = 24;
+            this.dgvCustomerDetails.Size = new System.Drawing.Size(1364, 382);
+            this.dgvCustomerDetails.TabIndex = 13;
+            this.dgvCustomerDetails.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvCustomerDetails.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvCustomerDetails.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvCustomerDetails.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvCustomerDetails.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvCustomerDetails.ThemeStyle.BackColor = System.Drawing.Color.Silver;
+            this.dgvCustomerDetails.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvCustomerDetails.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgvCustomerDetails.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvCustomerDetails.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvCustomerDetails.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvCustomerDetails.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvCustomerDetails.ThemeStyle.HeaderStyle.Height = 40;
+            this.dgvCustomerDetails.ThemeStyle.ReadOnly = false;
+            this.dgvCustomerDetails.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvCustomerDetails.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvCustomerDetails.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvCustomerDetails.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvCustomerDetails.ThemeStyle.RowsStyle.Height = 24;
+            this.dgvCustomerDetails.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvCustomerDetails.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvCustomerDetails.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomerDetails_CellEndEdit);
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 154);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.tableLayoutPanel3);
+            this.splitContainer1.Panel1.Margin = new System.Windows.Forms.Padding(0, 20, 0, 0);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
+            this.splitContainer1.Size = new System.Drawing.Size(1370, 628);
+            this.splitContainer1.SplitterDistance = 444;
+            this.splitContainer1.TabIndex = 11;
             // 
             // UC_ManageCustomerDetailsForm
             // 
@@ -552,14 +516,14 @@ namespace ABC_Car_Traders.Views.Admin
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerDetails)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCarDetails)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -571,25 +535,18 @@ namespace ABC_Car_Traders.Views.Admin
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvCarDetails;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearchCustomer;
+        private Guna.UI2.WinForms.Guna2Button btnAddCustomer;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2Button btnDeleteCustomer;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvCustomerDetails;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }

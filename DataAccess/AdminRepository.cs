@@ -9,26 +9,20 @@ namespace ABC_Car_Traders.DataAccess
 {
     public class AdminRepository
     {
-        private string connectionString;
-
-        public AdminRepository(string connectionString)
-        {
-            this.connectionString = connectionString;
-        }
+        private string connectionString = "Data Source=LAPTOP-KGH138OG;Initial Catalog=abc_car_traders;Integrated Security=True";
 
         public bool ValidateAdminLogin(string username, string password)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (var connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT COUNT(*) FROM Admins WHERE Username = @Username AND Password = @Password";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@Username", username);
-                command.Parameters.AddWithValue("@Password", password);
-
                 connection.Open();
-                int count = (int)command.ExecuteScalar();
-
-                return count > 0;
+                var query = "SELECT COUNT(*) FROM Admins WHERE Username = @Username AND Password = @Password";
+                using (var command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Username", username);
+                    command.Parameters.AddWithValue("@Password", password);
+                    return (int)command.ExecuteScalar() > 0;
+                }
             }
         }
     }

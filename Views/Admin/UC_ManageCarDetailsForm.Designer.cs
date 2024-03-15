@@ -37,31 +37,20 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.deleteSelectedVehicle = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvCarDetails = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtSearchCar = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnAddCar = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.tableLayoutPanel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -89,14 +78,12 @@ namespace ABC_Car_Traders.Views.Admin
             this.label1.TabIndex = 2;
             this.label1.Text = "Manage Car Details";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // guna2Button2
             // 
             this.guna2Button2.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button2.BorderRadius = 5;
             this.guna2Button2.BorderThickness = 2;
-            this.guna2Button2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.guna2Button2.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
             this.guna2Button2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
             this.guna2Button2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
@@ -109,6 +96,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button2.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.Black;
             this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button2.ImageOffset = new System.Drawing.Point(10, 0);
@@ -118,14 +106,12 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button2.Size = new System.Drawing.Size(233, 50);
             this.guna2Button2.TabIndex = 29;
             this.guna2Button2.Text = "VIEW ALL VEHICLE";
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2Button3
             // 
             this.guna2Button3.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button3.BorderRadius = 5;
             this.guna2Button3.BorderThickness = 2;
-            this.guna2Button3.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.guna2Button3.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
             this.guna2Button3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
             this.guna2Button3.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
@@ -138,6 +124,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button3.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.guna2Button3.HoverState.FillColor = System.Drawing.Color.Black;
             this.guna2Button3.HoverState.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button3.ImageOffset = new System.Drawing.Point(10, 0);
@@ -147,14 +134,12 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button3.Size = new System.Drawing.Size(233, 50);
             this.guna2Button3.TabIndex = 29;
             this.guna2Button3.Text = "EDIT SELECTED VEHICLE";
-            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2Button4
             // 
             this.guna2Button4.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button4.BorderRadius = 5;
             this.guna2Button4.BorderThickness = 2;
-            this.guna2Button4.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.guna2Button4.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
             this.guna2Button4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
             this.guna2Button4.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
@@ -167,6 +152,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button4.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button4.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.guna2Button4.HoverState.FillColor = System.Drawing.Color.Black;
             this.guna2Button4.HoverState.ForeColor = System.Drawing.Color.White;
             this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button4.ImageOffset = new System.Drawing.Point(10, 0);
@@ -176,36 +162,35 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button4.Size = new System.Drawing.Size(233, 50);
             this.guna2Button4.TabIndex = 29;
             this.guna2Button4.Text = "REPORT SELECTED VEHICLE";
-            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
-            // guna2Button5
+            // deleteSelectedVehicle
             // 
-            this.guna2Button5.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button5.BorderRadius = 5;
-            this.guna2Button5.BorderThickness = 2;
-            this.guna2Button5.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button5.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
-            this.guna2Button5.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Button5.FillColor = System.Drawing.Color.Empty;
-            this.guna2Button5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button5.HoverState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button5.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button5.ImageOffset = new System.Drawing.Point(10, 0);
-            this.guna2Button5.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button5.Location = new System.Drawing.Point(824, 3);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(233, 50);
-            this.guna2Button5.TabIndex = 29;
-            this.guna2Button5.Text = "DELETE SELECTED VEHICLE";
-            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
+            this.deleteSelectedVehicle.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.deleteSelectedVehicle.BorderRadius = 5;
+            this.deleteSelectedVehicle.BorderThickness = 2;
+            this.deleteSelectedVehicle.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.deleteSelectedVehicle.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
+            this.deleteSelectedVehicle.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
+            this.deleteSelectedVehicle.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.deleteSelectedVehicle.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.deleteSelectedVehicle.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.deleteSelectedVehicle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.deleteSelectedVehicle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.deleteSelectedVehicle.FillColor = System.Drawing.Color.Empty;
+            this.deleteSelectedVehicle.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteSelectedVehicle.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.deleteSelectedVehicle.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.deleteSelectedVehicle.HoverState.FillColor = System.Drawing.Color.Black;
+            this.deleteSelectedVehicle.HoverState.ForeColor = System.Drawing.Color.White;
+            this.deleteSelectedVehicle.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.deleteSelectedVehicle.ImageOffset = new System.Drawing.Point(10, 0);
+            this.deleteSelectedVehicle.ImageSize = new System.Drawing.Size(40, 40);
+            this.deleteSelectedVehicle.Location = new System.Drawing.Point(824, 3);
+            this.deleteSelectedVehicle.Name = "deleteSelectedVehicle";
+            this.deleteSelectedVehicle.Size = new System.Drawing.Size(233, 50);
+            this.deleteSelectedVehicle.TabIndex = 29;
+            this.deleteSelectedVehicle.Text = "DELETE SELECTED VEHICLE";
+            this.deleteSelectedVehicle.Click += new System.EventHandler(this.deleteSelectedVehicle_Click);
             // 
             // guna2Button6
             // 
@@ -213,7 +198,6 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button6.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button6.BorderRadius = 5;
             this.guna2Button6.BorderThickness = 2;
-            this.guna2Button6.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.guna2Button6.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
             this.guna2Button6.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
             this.guna2Button6.CustomBorderThickness = new System.Windows.Forms.Padding(6, 0, 0, 0);
@@ -226,6 +210,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button6.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button6.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.guna2Button6.HoverState.FillColor = System.Drawing.Color.Black;
             this.guna2Button6.HoverState.ForeColor = System.Drawing.Color.White;
             this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button6.ImageOffset = new System.Drawing.Point(10, 0);
@@ -235,7 +220,6 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button6.Size = new System.Drawing.Size(233, 50);
             this.guna2Button6.TabIndex = 29;
             this.guna2Button6.Text = "<< PREVIOUS";
-            this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
             // 
             // tableLayoutPanel4
             // 
@@ -254,7 +238,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.tableLayoutPanel4.Controls.Add(this.guna2Button2, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.guna2Button3, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.guna2Button4, 5, 0);
-            this.tableLayoutPanel4.Controls.Add(this.guna2Button5, 7, 0);
+            this.tableLayoutPanel4.Controls.Add(this.deleteSelectedVehicle, 7, 0);
             this.tableLayoutPanel4.Controls.Add(this.guna2Button6, 9, 0);
             this.tableLayoutPanel4.Controls.Add(this.guna2Button7, 1, 2);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -267,14 +251,12 @@ namespace ABC_Car_Traders.Views.Admin
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.016395F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1357, 139);
             this.tableLayoutPanel4.TabIndex = 0;
-            this.tableLayoutPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel4_Paint);
             // 
             // guna2Button7
             // 
             this.guna2Button7.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button7.BorderRadius = 5;
             this.guna2Button7.BorderThickness = 2;
-            this.guna2Button7.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.guna2Button7.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
             this.guna2Button7.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
             this.guna2Button7.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
@@ -287,6 +269,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button7.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button7.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.guna2Button7.HoverState.FillColor = System.Drawing.Color.Black;
             this.guna2Button7.HoverState.ForeColor = System.Drawing.Color.White;
             this.guna2Button7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button7.ImageOffset = new System.Drawing.Point(10, 0);
@@ -296,7 +279,6 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button7.Size = new System.Drawing.Size(233, 50);
             this.guna2Button7.TabIndex = 29;
             this.guna2Button7.Text = "REPORT ALL VEHICLE";
-            this.guna2Button7.Click += new System.EventHandler(this.guna2Button7_Click);
             // 
             // groupBox1
             // 
@@ -311,7 +293,6 @@ namespace ABC_Car_Traders.Views.Admin
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "All Function";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // tableLayoutPanel3
             // 
@@ -327,7 +308,6 @@ namespace ABC_Car_Traders.Views.Admin
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.293706F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1363, 420);
             this.tableLayoutPanel3.TabIndex = 0;
-            this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
             // 
             // dgvCarDetails
             // 
@@ -345,21 +325,9 @@ namespace ABC_Car_Traders.Views.Admin
             this.dgvCarDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCarDetails.ColumnHeadersHeight = 40;
             this.dgvCarDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvCarDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10,
-            this.Column11});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -395,73 +363,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.dgvCarDetails.ThemeStyle.RowsStyle.Height = 24;
             this.dgvCarDetails.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvCarDetails.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvCarDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCarDetails_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "No";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Model";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Brand";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Name";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Fual Type";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Engine Capacity";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Color";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Buy Price";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Shell Price";
-            this.Column9.MinimumWidth = 6;
-            this.Column9.Name = "Column9";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Buy Date ";
-            this.Column10.MinimumWidth = 6;
-            this.Column10.Name = "Column10";
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Shell Date";
-            this.Column11.MinimumWidth = 6;
-            this.Column11.Name = "Column11";
+            this.dgvCarDetails.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCarDetails_CellEndEdit);
             // 
             // splitContainer1
             // 
@@ -481,7 +383,6 @@ namespace ABC_Car_Traders.Views.Admin
             this.splitContainer1.Size = new System.Drawing.Size(1363, 594);
             this.splitContainer1.SplitterDistance = 420;
             this.splitContainer1.TabIndex = 10;
-            this.splitContainer1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer1_SplitterMoved);
             // 
             // label
             // 
@@ -495,21 +396,6 @@ namespace ABC_Car_Traders.Views.Admin
             this.label.TabIndex = 26;
             this.label.Text = "Search the Car:";
             this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label.Click += new System.EventHandler(this.label_Click);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
-            this.btnLogin.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.btnLogin.Location = new System.Drawing.Point(1024, 22);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(255, 50);
-            this.btnLogin.TabIndex = 27;
-            this.btnLogin.Text = "ADD NEW CAR";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -521,8 +407,8 @@ namespace ABC_Car_Traders.Views.Admin
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.94271F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.37018F));
             this.tableLayoutPanel2.Controls.Add(this.label, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnLogin, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.guna2TextBox2, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txtSearchCar, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnAddCar, 4, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -530,7 +416,68 @@ namespace ABC_Car_Traders.Views.Admin
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1363, 94);
             this.tableLayoutPanel2.TabIndex = 28;
-            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
+            // 
+            // txtSearchCar
+            // 
+            this.txtSearchCar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSearchCar.AutoRoundedCorners = true;
+            this.txtSearchCar.BackColor = System.Drawing.Color.Transparent;
+            this.txtSearchCar.BorderColor = System.Drawing.Color.DimGray;
+            this.txtSearchCar.BorderRadius = 23;
+            this.txtSearchCar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchCar.DefaultText = "";
+            this.txtSearchCar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchCar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchCar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchCar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchCar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
+            this.txtSearchCar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchCar.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtSearchCar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSearchCar.HoverState.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSearchCar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
+            this.txtSearchCar.IconLeftSize = new System.Drawing.Size(0, 0);
+            this.txtSearchCar.IconRight = ((System.Drawing.Image)(resources.GetObject("txtSearchCar.IconRight")));
+            this.txtSearchCar.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.txtSearchCar.IconRightOffset = new System.Drawing.Point(10, 0);
+            this.txtSearchCar.IconRightSize = new System.Drawing.Size(30, 30);
+            this.txtSearchCar.Location = new System.Drawing.Point(355, 23);
+            this.txtSearchCar.Margin = new System.Windows.Forms.Padding(0);
+            this.txtSearchCar.Name = "txtSearchCar";
+            this.txtSearchCar.PasswordChar = '\0';
+            this.txtSearchCar.PlaceholderText = "Search Here";
+            this.txtSearchCar.SelectedText = "";
+            this.txtSearchCar.Size = new System.Drawing.Size(389, 48);
+            this.txtSearchCar.TabIndex = 32;
+            this.txtSearchCar.TextChanged += new System.EventHandler(this.txtSearchCar_TextChanged);
+            // 
+            // btnAddCar
+            // 
+            this.btnAddCar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddCar.AnimatedGIF = true;
+            this.btnAddCar.AutoRoundedCorners = true;
+            this.btnAddCar.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAddCar.BorderRadius = 31;
+            this.btnAddCar.BorderThickness = 2;
+            this.btnAddCar.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 4);
+            this.btnAddCar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddCar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddCar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddCar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddCar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
+            this.btnAddCar.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAddCar.ForeColor = System.Drawing.Color.White;
+            this.btnAddCar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
+            this.btnAddCar.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btnAddCar.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnAddCar.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
+            this.btnAddCar.Location = new System.Drawing.Point(1037, 15);
+            this.btnAddCar.Name = "btnAddCar";
+            this.btnAddCar.ShadowDecoration.Color = System.Drawing.Color.White;
+            this.btnAddCar.Size = new System.Drawing.Size(228, 64);
+            this.btnAddCar.TabIndex = 33;
+            this.btnAddCar.Text = "ADD NEW CAR";
+            this.btnAddCar.Click += new System.EventHandler(this.btnAddCar_Click);
             // 
             // panel2
             // 
@@ -541,7 +488,6 @@ namespace ABC_Car_Traders.Views.Admin
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1363, 94);
             this.panel2.TabIndex = 9;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel1
             // 
@@ -552,39 +498,6 @@ namespace ABC_Car_Traders.Views.Admin
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1363, 60);
             this.panel1.TabIndex = 8;
-            // 
-            // guna2TextBox2
-            // 
-            this.guna2TextBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2TextBox2.AutoRoundedCorners = true;
-            this.guna2TextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.DimGray;
-            this.guna2TextBox2.BorderRadius = 23;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold);
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2TextBox2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
-            this.guna2TextBox2.IconLeftSize = new System.Drawing.Size(0, 0);
-            this.guna2TextBox2.IconRight = ((System.Drawing.Image)(resources.GetObject("guna2TextBox2.IconRight")));
-            this.guna2TextBox2.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2TextBox2.IconRightOffset = new System.Drawing.Point(10, 0);
-            this.guna2TextBox2.IconRightSize = new System.Drawing.Size(30, 30);
-            this.guna2TextBox2.Location = new System.Drawing.Point(355, 23);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "Search Here";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(389, 48);
-            this.guna2TextBox2.TabIndex = 32;
             // 
             // UC_ManageCarDetailsForm
             // 
@@ -618,7 +531,7 @@ namespace ABC_Car_Traders.Views.Admin
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2Button deleteSelectedVehicle;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
@@ -626,22 +539,11 @@ namespace ABC_Car_Traders.Views.Admin
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label label;
-        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2DataGridView dgvCarDetails;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearchCar;
+        private Guna.UI2.WinForms.Guna2Button btnAddCar;
     }
 }

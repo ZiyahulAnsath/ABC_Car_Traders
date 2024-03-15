@@ -30,27 +30,17 @@ namespace ABC_Car_Traders.Views.Customer
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_SearchCarDetailsForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label = new System.Windows.Forms.Label();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtSearchCar = new Guna.UI2.WinForms.Guna2TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvCarDetails = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
@@ -88,7 +78,7 @@ namespace ABC_Car_Traders.Views.Customer
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.94271F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.37018F));
             this.tableLayoutPanel2.Controls.Add(this.label, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.guna2TextBox2, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txtSearchCar, 2, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -110,38 +100,39 @@ namespace ABC_Car_Traders.Views.Customer
             this.label.Text = "Search the Car:";
             this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2TextBox2
+            // txtSearchCar
             // 
-            this.guna2TextBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2TextBox2.AutoRoundedCorners = true;
-            this.guna2TextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.DimGray;
-            this.guna2TextBox2.BorderRadius = 23;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold);
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2TextBox2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
-            this.guna2TextBox2.IconLeftSize = new System.Drawing.Size(0, 0);
-            this.guna2TextBox2.IconRight = ((System.Drawing.Image)(resources.GetObject("guna2TextBox2.IconRight")));
-            this.guna2TextBox2.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2TextBox2.IconRightOffset = new System.Drawing.Point(10, 0);
-            this.guna2TextBox2.IconRightSize = new System.Drawing.Size(30, 30);
-            this.guna2TextBox2.Location = new System.Drawing.Point(364, 23);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "Search Here";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(389, 48);
-            this.guna2TextBox2.TabIndex = 32;
+            this.txtSearchCar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSearchCar.AutoRoundedCorners = true;
+            this.txtSearchCar.BackColor = System.Drawing.Color.Transparent;
+            this.txtSearchCar.BorderColor = System.Drawing.Color.DimGray;
+            this.txtSearchCar.BorderRadius = 23;
+            this.txtSearchCar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchCar.DefaultText = "";
+            this.txtSearchCar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchCar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchCar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchCar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchCar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
+            this.txtSearchCar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchCar.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtSearchCar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSearchCar.HoverState.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSearchCar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
+            this.txtSearchCar.IconLeftSize = new System.Drawing.Size(0, 0);
+            this.txtSearchCar.IconRight = ((System.Drawing.Image)(resources.GetObject("txtSearchCar.IconRight")));
+            this.txtSearchCar.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.txtSearchCar.IconRightOffset = new System.Drawing.Point(10, 0);
+            this.txtSearchCar.IconRightSize = new System.Drawing.Size(30, 30);
+            this.txtSearchCar.Location = new System.Drawing.Point(364, 23);
+            this.txtSearchCar.Margin = new System.Windows.Forms.Padding(0);
+            this.txtSearchCar.Name = "txtSearchCar";
+            this.txtSearchCar.PasswordChar = '\0';
+            this.txtSearchCar.PlaceholderText = "Search Here";
+            this.txtSearchCar.SelectedText = "";
+            this.txtSearchCar.Size = new System.Drawing.Size(389, 48);
+            this.txtSearchCar.TabIndex = 32;
+            this.txtSearchCar.TextChanged += new System.EventHandler(this.txtSearchCar_TextChanged);
             // 
             // splitContainer1
             // 
@@ -180,44 +171,40 @@ namespace ABC_Car_Traders.Views.Customer
             // 
             // dgvCarDetails
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dgvCarDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvCarDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCarDetails.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvCarDetails.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCarDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCarDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCarDetails.ColumnHeadersHeight = 40;
             this.dgvCarDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvCarDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10,
-            this.Column11});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCarDetails.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCarDetails.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCarDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCarDetails.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvCarDetails.Location = new System.Drawing.Point(3, 33);
             this.dgvCarDetails.Name = "dgvCarDetails";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCarDetails.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCarDetails.RowHeadersVisible = false;
             this.dgvCarDetails.RowHeadersWidth = 51;
             this.dgvCarDetails.RowTemplate.Height = 24;
@@ -244,72 +231,6 @@ namespace ABC_Car_Traders.Views.Customer
             this.dgvCarDetails.ThemeStyle.RowsStyle.Height = 24;
             this.dgvCarDetails.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvCarDetails.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "No";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Model";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Brand";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Name";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Fual Type";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Engine Capacity";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Color";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Buy Price";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Shell Price";
-            this.Column9.MinimumWidth = 6;
-            this.Column9.Name = "Column9";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Buy Date ";
-            this.Column10.MinimumWidth = 6;
-            this.Column10.Name = "Column10";
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Shell Date";
-            this.Column11.MinimumWidth = 6;
-            this.Column11.Name = "Column11";
             // 
             // groupBox1
             // 
@@ -358,7 +279,6 @@ namespace ABC_Car_Traders.Views.Customer
             this.guna2Button2.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button2.BorderRadius = 5;
             this.guna2Button2.BorderThickness = 2;
-            this.guna2Button2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.guna2Button2.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
             this.guna2Button2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
             this.guna2Button2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
@@ -371,6 +291,7 @@ namespace ABC_Car_Traders.Views.Customer
             this.guna2Button2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button2.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.Black;
             this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button2.ImageOffset = new System.Drawing.Point(10, 0);
@@ -386,7 +307,6 @@ namespace ABC_Car_Traders.Views.Customer
             this.guna2Button3.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button3.BorderRadius = 5;
             this.guna2Button3.BorderThickness = 2;
-            this.guna2Button3.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.guna2Button3.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
             this.guna2Button3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
             this.guna2Button3.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
@@ -399,6 +319,7 @@ namespace ABC_Car_Traders.Views.Customer
             this.guna2Button3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button3.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.guna2Button3.HoverState.FillColor = System.Drawing.Color.Black;
             this.guna2Button3.HoverState.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button3.ImageOffset = new System.Drawing.Point(10, 0);
@@ -469,22 +390,11 @@ namespace ABC_Car_Traders.Views.Customer
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private Guna.UI2.WinForms.Guna2DataGridView dgvCarDetails;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearchCar;
     }
 }
