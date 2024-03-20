@@ -181,6 +181,20 @@ namespace ABC_Car_Traders.DataAccess
 
 
         // Get customer ID by username
+        //public int GetCustomerIdByUsername(string username)
+        //{
+        //    using (var connection = new SqlConnection(connectionString))
+        //    {
+        //        connection.Open();
+        //        var query = "SELECT CustomerID FROM Customers WHERE Username = @Username";
+        //        using (var command = new SqlCommand(query, connection))
+        //        {
+        //            command.Parameters.AddWithValue("@Username", username);
+        //            return (int)command.ExecuteScalar();
+        //        }
+        //    }
+        //}
+
         public int GetCustomerIdByUsername(string username)
         {
             using (var connection = new SqlConnection(connectionString))
@@ -190,9 +204,18 @@ namespace ABC_Car_Traders.DataAccess
                 using (var command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Username", username);
-                    return (int)command.ExecuteScalar();
+                    var result = command.ExecuteScalar();
+                    if (result != null)
+                    {
+                        return (int)result;
+                    }
+                    else
+                    {
+                        throw new ArgumentException("Username not found.");
+                    }
                 }
             }
         }
+
     }
 }

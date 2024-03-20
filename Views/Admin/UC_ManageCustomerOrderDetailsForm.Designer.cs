@@ -37,12 +37,12 @@ namespace ABC_Car_Traders.Views.Admin
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtSearchOrders = new Guna.UI2.WinForms.Guna2TextBox();
             this.label = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvOrderDetails = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -54,6 +54,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDeleteCustomerOrder = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -74,9 +75,10 @@ namespace ABC_Car_Traders.Views.Admin
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0, 20, 0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1383, 60);
-            this.panel1.TabIndex = 9;
+            this.panel1.Size = new System.Drawing.Size(1348, 60);
+            this.panel1.TabIndex = 10;
             // 
             // label1
             // 
@@ -85,12 +87,12 @@ namespace ABC_Car_Traders.Views.Admin
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
             this.label1.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Cyan;
-            this.label1.Location = new System.Drawing.Point(532, 16);
+            this.label1.Location = new System.Drawing.Point(465, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(404, 29);
+            this.label1.Size = new System.Drawing.Size(418, 29);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Manage Customer Order Details";
+            this.label1.Text = "Manage Customer Order Deatails";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
@@ -100,8 +102,8 @@ namespace ABC_Car_Traders.Views.Admin
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 60);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1383, 94);
-            this.panel2.TabIndex = 11;
+            this.panel2.Size = new System.Drawing.Size(1348, 94);
+            this.panel2.TabIndex = 13;
             // 
             // tableLayoutPanel2
             // 
@@ -112,18 +114,52 @@ namespace ABC_Car_Traders.Views.Admin
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.36364F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.09091F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.545455F));
+            this.tableLayoutPanel2.Controls.Add(this.txtSearchOrders, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.label, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.guna2TextBox2, 4, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1383, 94);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1348, 94);
             this.tableLayoutPanel2.TabIndex = 28;
+            // 
+            // txtSearchOrders
+            // 
+            this.txtSearchOrders.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSearchOrders.AutoRoundedCorners = true;
+            this.txtSearchOrders.BackColor = System.Drawing.Color.Transparent;
+            this.txtSearchOrders.BorderColor = System.Drawing.Color.DimGray;
+            this.txtSearchOrders.BorderRadius = 23;
+            this.txtSearchOrders.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchOrders.DefaultText = "";
+            this.txtSearchOrders.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchOrders.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchOrders.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchOrders.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchOrders.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
+            this.txtSearchOrders.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchOrders.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtSearchOrders.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSearchOrders.HoverState.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSearchOrders.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
+            this.txtSearchOrders.IconLeftSize = new System.Drawing.Size(0, 0);
+            this.txtSearchOrders.IconRight = ((System.Drawing.Image)(resources.GetObject("txtSearchOrders.IconRight")));
+            this.txtSearchOrders.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.txtSearchOrders.IconRightOffset = new System.Drawing.Point(10, 0);
+            this.txtSearchOrders.IconRightSize = new System.Drawing.Size(30, 30);
+            this.txtSearchOrders.Location = new System.Drawing.Point(894, 23);
+            this.txtSearchOrders.Margin = new System.Windows.Forms.Padding(0);
+            this.txtSearchOrders.Name = "txtSearchOrders";
+            this.txtSearchOrders.PasswordChar = '\0';
+            this.txtSearchOrders.PlaceholderText = "Search Here";
+            this.txtSearchOrders.SelectedText = "";
+            this.txtSearchOrders.Size = new System.Drawing.Size(389, 48);
+            this.txtSearchOrders.TabIndex = 31;
+            this.txtSearchOrders.TextChanged += new System.EventHandler(this.txtSearchOrders_TextChanged);
             // 
             // label
             // 
@@ -131,7 +167,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.label.AutoSize = true;
             this.label.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.ForeColor = System.Drawing.Color.Cyan;
-            this.label.Location = new System.Drawing.Point(71, 33);
+            this.label.Location = new System.Drawing.Point(67, 33);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(208, 27);
             this.label.TabIndex = 26;
@@ -144,7 +180,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Cyan;
-            this.label2.Location = new System.Drawing.Point(756, 33);
+            this.label2.Location = new System.Drawing.Point(736, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 27);
             this.label2.TabIndex = 26;
@@ -159,11 +195,11 @@ namespace ABC_Car_Traders.Views.Admin
             this.tableLayoutPanel1.Controls.Add(this.guna2Button2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.guna2Button1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(291, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(284, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(396, 88);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(386, 88);
             this.tableLayoutPanel1.TabIndex = 27;
             // 
             // guna2Button2
@@ -189,9 +225,9 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button2.ImageOffset = new System.Drawing.Point(10, 0);
             this.guna2Button2.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button2.Location = new System.Drawing.Point(201, 22);
+            this.guna2Button2.Location = new System.Drawing.Point(196, 22);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(192, 44);
+            this.guna2Button2.Size = new System.Drawing.Size(187, 44);
             this.guna2Button2.TabIndex = 30;
             this.guna2Button2.Text = "PARTS";
             // 
@@ -220,42 +256,9 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button1.ImageSize = new System.Drawing.Size(40, 40);
             this.guna2Button1.Location = new System.Drawing.Point(3, 22);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(192, 44);
+            this.guna2Button1.Size = new System.Drawing.Size(187, 44);
             this.guna2Button1.TabIndex = 30;
             this.guna2Button1.Text = "VEHICLES";
-            // 
-            // guna2TextBox2
-            // 
-            this.guna2TextBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2TextBox2.AutoRoundedCorners = true;
-            this.guna2TextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.DimGray;
-            this.guna2TextBox2.BorderRadius = 23;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold);
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2TextBox2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
-            this.guna2TextBox2.IconLeftSize = new System.Drawing.Size(0, 0);
-            this.guna2TextBox2.IconRight = ((System.Drawing.Image)(resources.GetObject("guna2TextBox2.IconRight")));
-            this.guna2TextBox2.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2TextBox2.IconRightOffset = new System.Drawing.Point(10, 0);
-            this.guna2TextBox2.IconRightSize = new System.Drawing.Size(30, 30);
-            this.guna2TextBox2.Location = new System.Drawing.Point(922, 23);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "Search Here";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(389, 48);
-            this.guna2TextBox2.TabIndex = 32;
             // 
             // splitContainer1
             // 
@@ -272,9 +275,9 @@ namespace ABC_Car_Traders.Views.Admin
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
-            this.splitContainer1.Size = new System.Drawing.Size(1383, 620);
-            this.splitContainer1.SplitterDistance = 438;
-            this.splitContainer1.TabIndex = 12;
+            this.splitContainer1.Size = new System.Drawing.Size(1348, 629);
+            this.splitContainer1.SplitterDistance = 443;
+            this.splitContainer1.TabIndex = 14;
             // 
             // tableLayoutPanel3
             // 
@@ -288,7 +291,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.293706F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.41259F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.293706F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1383, 438);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1348, 443);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // dgvOrderDetails
@@ -322,7 +325,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.dgvOrderDetails.RowHeadersVisible = false;
             this.dgvOrderDetails.RowHeadersWidth = 51;
             this.dgvOrderDetails.RowTemplate.Height = 24;
-            this.dgvOrderDetails.Size = new System.Drawing.Size(1377, 376);
+            this.dgvOrderDetails.Size = new System.Drawing.Size(1342, 381);
             this.dgvOrderDetails.TabIndex = 13;
             this.dgvOrderDetails.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvOrderDetails.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -345,6 +348,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.dgvOrderDetails.ThemeStyle.RowsStyle.Height = 24;
             this.dgvOrderDetails.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvOrderDetails.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvOrderDetails.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrderDetails_CellEndEdit);
             // 
             // groupBox1
             // 
@@ -355,7 +359,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.groupBox1.ForeColor = System.Drawing.Color.Cyan;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1383, 178);
+            this.groupBox1.Size = new System.Drawing.Size(1348, 182);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "All Function";
@@ -380,6 +384,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.tableLayoutPanel4.Controls.Add(this.guna2Button6, 7, 0);
             this.tableLayoutPanel4.Controls.Add(this.guna2Button7, 9, 0);
             this.tableLayoutPanel4.Controls.Add(this.guna2Button8, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.btnDeleteCustomerOrder, 9, 2);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 28);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -388,7 +393,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.016395F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.9836F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.016395F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1377, 147);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1342, 151);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // guna2Button3
@@ -415,7 +420,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button3.ImageSize = new System.Drawing.Size(40, 40);
             this.guna2Button3.Location = new System.Drawing.Point(29, 3);
             this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(237, 54);
+            this.guna2Button3.Size = new System.Drawing.Size(231, 55);
             this.guna2Button3.TabIndex = 29;
             this.guna2Button3.Text = "PRINT ALL VEHICLES DETAILS";
             // 
@@ -441,9 +446,9 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button4.ImageOffset = new System.Drawing.Point(10, 0);
             this.guna2Button4.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button4.Location = new System.Drawing.Point(298, 3);
+            this.guna2Button4.Location = new System.Drawing.Point(292, 3);
             this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(237, 54);
+            this.guna2Button4.Size = new System.Drawing.Size(231, 55);
             this.guna2Button4.TabIndex = 29;
             this.guna2Button4.Text = "PRINT SELECTED VEHICLE";
             // 
@@ -469,9 +474,9 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button5.ImageOffset = new System.Drawing.Point(10, 0);
             this.guna2Button5.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button5.Location = new System.Drawing.Point(567, 3);
+            this.guna2Button5.Location = new System.Drawing.Point(555, 3);
             this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(237, 54);
+            this.guna2Button5.Size = new System.Drawing.Size(231, 55);
             this.guna2Button5.TabIndex = 29;
             this.guna2Button5.Text = "PRINT ALL PARTS DETAILS";
             // 
@@ -497,9 +502,9 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button6.ImageOffset = new System.Drawing.Point(10, 0);
             this.guna2Button6.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button6.Location = new System.Drawing.Point(836, 3);
+            this.guna2Button6.Location = new System.Drawing.Point(818, 3);
             this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(237, 54);
+            this.guna2Button6.Size = new System.Drawing.Size(231, 55);
             this.guna2Button6.TabIndex = 29;
             this.guna2Button6.Text = "PRINT SELECTED PARTS";
             // 
@@ -520,15 +525,15 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button7.FillColor = System.Drawing.Color.Empty;
             this.guna2Button7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button7.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Button7.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
             this.guna2Button7.HoverState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button7.HoverState.FillColor = System.Drawing.Color.Black;
             this.guna2Button7.HoverState.ForeColor = System.Drawing.Color.White;
             this.guna2Button7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button7.ImageOffset = new System.Drawing.Point(10, 0);
             this.guna2Button7.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button7.Location = new System.Drawing.Point(1105, 3);
+            this.guna2Button7.Location = new System.Drawing.Point(1081, 3);
             this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.Size = new System.Drawing.Size(237, 54);
+            this.guna2Button7.Size = new System.Drawing.Size(231, 55);
             this.guna2Button7.TabIndex = 29;
             this.guna2Button7.Text = "<< PREVIOUS";
             // 
@@ -554,11 +559,40 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button8.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button8.ImageOffset = new System.Drawing.Point(10, 0);
             this.guna2Button8.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button8.Location = new System.Drawing.Point(29, 76);
+            this.guna2Button8.Location = new System.Drawing.Point(29, 77);
             this.guna2Button8.Name = "guna2Button8";
-            this.guna2Button8.Size = new System.Drawing.Size(237, 54);
+            this.guna2Button8.Size = new System.Drawing.Size(231, 55);
             this.guna2Button8.TabIndex = 29;
             this.guna2Button8.Text = "PRINT ALL CATEGORIES";
+            // 
+            // btnDeleteCustomerOrder
+            // 
+            this.btnDeleteCustomerOrder.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDeleteCustomerOrder.BorderRadius = 5;
+            this.btnDeleteCustomerOrder.BorderThickness = 2;
+            this.btnDeleteCustomerOrder.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.btnDeleteCustomerOrder.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
+            this.btnDeleteCustomerOrder.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
+            this.btnDeleteCustomerOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteCustomerOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteCustomerOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeleteCustomerOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDeleteCustomerOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDeleteCustomerOrder.FillColor = System.Drawing.Color.Empty;
+            this.btnDeleteCustomerOrder.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteCustomerOrder.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDeleteCustomerOrder.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.btnDeleteCustomerOrder.HoverState.FillColor = System.Drawing.Color.Black;
+            this.btnDeleteCustomerOrder.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteCustomerOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteCustomerOrder.Image")));
+            this.btnDeleteCustomerOrder.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDeleteCustomerOrder.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnDeleteCustomerOrder.Location = new System.Drawing.Point(1081, 77);
+            this.btnDeleteCustomerOrder.Name = "btnDeleteCustomerOrder";
+            this.btnDeleteCustomerOrder.Size = new System.Drawing.Size(231, 55);
+            this.btnDeleteCustomerOrder.TabIndex = 30;
+            this.btnDeleteCustomerOrder.Text = "DELETE SELECTED CUSTOMER ORDER";
+            this.btnDeleteCustomerOrder.Click += new System.EventHandler(this.btnDeleteCustomerOrder_Click);
             // 
             // UC_ManageCustomerOrderDetailsForm
             // 
@@ -568,7 +602,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "UC_ManageCustomerOrderDetailsForm";
-            this.Size = new System.Drawing.Size(1383, 774);
+            this.Size = new System.Drawing.Size(1348, 783);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -593,6 +627,7 @@ namespace ABC_Car_Traders.Views.Admin
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearchOrders;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
@@ -609,6 +644,6 @@ namespace ABC_Car_Traders.Views.Admin
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2Button btnDeleteCustomerOrder;
     }
 }

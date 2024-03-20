@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using ABC_Car_Traders.Models;
 
@@ -13,118 +15,67 @@ namespace ABC_orderItem_Traders.DataAccess
             _connectionString = connectionString;
         }
 
-        //public void PlaceorderItemOrder(int customerId, int orderItemId, int quantity)
-        //{
-        //    using (SqlConnection connection = new SqlConnection(_connectionString))
-        //    {
-        //        string query = @"INSERT INTO Orders (CustomerID, OrderDate) 
-        //                         VALUES (@CustomerID, @OrderDate);
-        //                         SELECT SCOPE_IDENTITY();";
+        //List All Order Table data
+        public List<OrderItem> GetAllOrders(string searchQuery = "")
+        {
+            List<OrderItem> orders = new List<OrderItem>();
 
-        //        connection.Open();
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                string query = "SELECT * FROM Orders";
 
-        //        int orderId;
-        //        using (SqlCommand command = new SqlCommand(query, connection))
-        //        {
-        //            command.Parameters.AddWithValue("@CustomerID", customerId);
-        //            command.Parameters.AddWithValue("@OrderDate", DateTime.Now);
-        //            orderId = Convert.ToInt32(command.ExecuteScalar());
-        //        }
+                // Append the WHERE clause to filter based on the search query
+                if (!string.IsNullOrEmpty(searchQuery))
+                {
+                    query += " WHERE CustomerName LIKE @searchQuery OR ProductName LIKE @searchQuery OR Model LIKE @searchQuery OR Brand LIKE @searchQuery OR Status LIKE @searchQuery";
+                }
 
-        //        string insertOrderItemsQuery = @"INSERT INTO orderItemOrderItems (OrderID, orderItemID, Quantity) 
-        //                                         VALUES (@OrderID, @orderItemID, @Quantity)";
-        //        using (SqlCommand command = new SqlCommand(insertOrderItemsQuery, connection))
-        //        {
-        //            command.Parameters.AddWithValue("@OrderID", orderId);
-        //            command.Parameters.AddWithValue("@orderItemID", orderItemId);
-        //            command.Parameters.AddWithValue("@Quantity", quantity);
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    if (!string.IsNullOrEmpty(searchQuery))
+                    {
+                        // Add the search query parameter
+                        command.Parameters.AddWithValue("@SearchQuery", "%" + searchQuery + "%");
+                    }
 
-        //            command.ExecuteNonQuery();
-        //        }
-        //    }
-        //}
+                    connection.Open();
 
-        //public void PlaceorderItemPartOrder(int customerId, int orderItemPartId, int quantity)
-        //{
-        //    using (SqlConnection connection = new SqlConnection(_connectionString))
-        //    {
-        //        string query = @"INSERT INTO Orders (CustomerID, OrderDate) 
-        //                         VALUES (@CustomerID, @OrderDate);
-        //                         SELECT SCOPE_IDENTITY();";
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            OrderItem order = new OrderItem
+                            {
+                                OrderID = reader.GetInt32(reader.GetOrdinal("OrderID")),
+                                CustomerID = reader.GetInt32(reader.GetOrdinal("CustomerID")),
+                                CustomerName = reader.GetString(reader.GetOrdinal("CustomerName")),
+                                ProductID = reader.GetInt32(reader.GetOrdinal("ProductID")),
+                                ProductName = reader.GetString(reader.GetOrdinal("ProductName")),
+                                Model = reader.GetString(reader.GetOrdinal("Model")),
+                                Brand = reader.GetString(reader.GetOrdinal("Brand")),
+                                Price = reader.GetDecimal(reader.GetOrdinal("Price")),
+                                OrderDate = reader.GetDateTime(reader.GetOrdinal("OrderDate")),
+                                Status = reader.GetInt32(reader.GetOrdinal("Status"))
+                            };
 
-        //        connection.Open();
+                            orders.Add(order);
+                        }
+                    }
+                }
+            }
 
-        //        int orderId;
-        //        using (SqlCommand command = new SqlCommand(query, connection))
-        //        {
-        //            command.Parameters.AddWithValue("@CustomerID", customerId);
-        //            command.Parameters.AddWithValue("@OrderDate", DateTime.Now);
-        //            orderId = Convert.ToInt32(command.ExecuteScalar());
-        //        }
+            return orders;
+        }
 
-        //        string insertOrderItemsQuery = @"INSERT INTO orderItemPartOrderItems (OrderID, PartID, Quantity) 
-        //                                         VALUES (@OrderID, @PartID, @Quantity)";
-        //        using (SqlCommand command = new SqlCommand(insertOrderItemsQuery, connection))
-        //        {
-        //            command.Parameters.AddWithValue("@OrderID", orderId);
-        //            command.Parameters.AddWithValue("@PartID", orderItemPartId);
-        //            command.Parameters.AddWithValue("@Quantity", quantity);
-
-        //            command.ExecuteNonQuery();
-        //        }
-        //    }
-        //}
-
-        // Place order based on selected product from DataGridView
-        //public void PlaceOrder(int customerId, int productId, int quantity, string orderType)
-        //{
-        //    using (SqlConnection connection = new SqlConnection(_connectionString))
-        //    {
-        //        string query = @"INSERT INTO Orders (CustomerID, OrderDate) 
-        //                     VALUES (@CustomerID, @OrderDate);
-        //                     SELECT SCOPE_IDENTITY();";
-
-        //        connection.Open();
-
-        //        int orderId;
-        //        using (SqlCommand command = new SqlCommand(query, connection))
-        //        {
-        //            command.Parameters.AddWithValue("@CustomerID", customerId);
-        //            command.Parameters.AddWithValue("@OrderDate", DateTime.Now);
-        //            orderId = Convert.ToInt32(command.ExecuteScalar());
-        //        }
-
-        //        string insertOrderItemsQuery = string.Empty;
-        //        if (orderType == "orderItem")
-        //        {
-        //            insertOrderItemsQuery = @"INSERT INTO orderItemOrderItems (OrderID, orderItemID, Quantity) 
-        //                                     VALUES (@OrderID, @ProductID, @Quantity)";
-        //        }
-        //        else if (orderType == "orderItemPart")
-        //        {
-        //            insertOrderItemsQuery = @"INSERT INTO orderItemPartOrderItems (OrderID, PartID, Quantity) 
-        //                                     VALUES (@OrderID, @ProductID, @Quantity)";
-        //        }
-
-        //        using (SqlCommand command = new SqlCommand(insertOrderItemsQuery, connection))
-        //        {
-        //            command.Parameters.AddWithValue("@OrderID", orderId);
-        //            command.Parameters.AddWithValue("@ProductID", productId);
-        //            command.Parameters.AddWithValue("@Quantity", quantity);
-
-        //            command.ExecuteNonQuery();
-        //        }
-        //    }
-        //}
-
-        public void PlaceorderItemOrder(OrderItem orderItem)
+        //Insert Orders Table data
+        public void PlaceOrderItem(OrderItem orderItem)
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
 
-                string query = @"INSERT INTO OrderItem (CustomerID,CustomerName,ProductID,ProductName,Model,Brand,Price,OrderDate,Status) 
-                                 VALUES (@CustomerID,@CustomerName, @ProductID, @ProductName, @Model,@Brand,@Price,@OrderDate,@Status)";
+                string query = @"INSERT INTO Orders (CustomerID, CustomerName, ProductID, ProductName, Model, Brand, Price, OrderDate, Status) 
+                                 VALUES (@CustomerID, @CustomerName, @ProductID, @ProductName, @Model, @Brand, @Price, @OrderDate, @Status)";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -136,11 +87,71 @@ namespace ABC_orderItem_Traders.DataAccess
                     command.Parameters.AddWithValue("@Brand", orderItem.Brand);
                     command.Parameters.AddWithValue("@Price", orderItem.Price);
                     command.Parameters.AddWithValue("@OrderDate", orderItem.OrderDate);
-                    command.Parameters.AddWithValue("@Status", orderItem.Status);                    
+                    command.Parameters.AddWithValue("@Status", orderItem.Status);
                     command.ExecuteNonQuery();
                 }
+            }
+        }
 
+        // Update Order
+        public void UpdateOrder(OrderItem orderItem)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
 
+                string query = @"UPDATE Orders SET CustomerID = @CustomerID, CustomerName = @CustomerName, 
+                                 ProductID = @ProductID, ProductName = @ProductName, Model = @Model, 
+                                 Brand = @Brand, Price = @Price, OrderDate = @OrderDate, Status = @Status 
+                                 WHERE OrderID = @OrderID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@CustomerID", orderItem.CustomerID);
+                    command.Parameters.AddWithValue("@CustomerName", orderItem.CustomerName);
+                    command.Parameters.AddWithValue("@ProductID", orderItem.ProductID);
+                    command.Parameters.AddWithValue("@ProductName", orderItem.ProductName);
+                    command.Parameters.AddWithValue("@Model", orderItem.Model);
+                    command.Parameters.AddWithValue("@Brand", orderItem.Brand);
+                    command.Parameters.AddWithValue("@Price", orderItem.Price);
+                    command.Parameters.AddWithValue("@OrderDate", orderItem.OrderDate);
+                    command.Parameters.AddWithValue("@Status", orderItem.Status);
+                    command.Parameters.AddWithValue("@OrderID", orderItem.OrderID);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        // Delete Order
+        public void DeleteOrder(int orderId)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                string query = @"DELETE FROM Orders WHERE OrderID = @OrderID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@OrderID", orderId);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        // Count total orders
+        public int CountTotalOrders()
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                string query = @"SELECT COUNT(*) FROM Orders";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    return (int)command.ExecuteScalar();
+                }
             }
         }
     }

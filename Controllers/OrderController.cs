@@ -1,46 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ABC_Car_Traders.DataAccess;
+using System.Data;
 using ABC_Car_Traders.Models;
+using ABC_orderItem_Traders.DataAccess;
 
 namespace ABC_Car_Traders.Controllers
 {
     public class OrderController
     {
-        //private readonly OrderRepository _orderRepository;
-        //private readonly CustomerRepository _customerRepository;
+        private readonly OrderRepository _orderRepository;
 
-        //public OrderController(string connectionString)
-        //{
-        //    _orderRepository = new OrderRepository(connectionString);
-        //    _customerRepository = new CustomerRepository();
-        //}
+        public OrderController(string connectionString)
+        {
+            _orderRepository = new OrderRepository(connectionString);
+        }
 
+        public void RegisterOrderItem(OrderItem orderItem)
+        {
+            _orderRepository.PlaceOrderItem(orderItem);
+        }
 
-
-        //// Place order based on selected product from DataGridView
-        //public void PlaceOrderFromDataGridView(string username, int productId, int quantity, string orderType)
-        //{
-        //    int customerId = _customerRepository.GetCustomerIdByUsername(username);
-        //    _orderRepository.PlaceOrder(customerId, productId, quantity, orderType);
-        //}
-
-
-
-
-        //public void PlaceCarOrder(int customerId, int carId, int quantity)
-        //{
-        //    _orderRepository.PlaceCarOrder(customerId, carId, quantity);
-        //}
-
-        //public void PlaceCarPartOrder(int customerId, int carPartId, int quantity)
-        //{
-        //    _orderRepository.PlaceCarPartOrder(customerId, carPartId, quantity);
-        //}
-
-
+        public List<OrderItem> GetAllOrders()
+        {
+            return _orderRepository.GetAllOrders();
+        }
     }
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ABC_Car_Traders.DataAccess;
 using ABC_Car_Traders.Controllers;
+using ABC_Car_Traders.Models;
 
 namespace ABC_Car_Traders.Views.Customer
 {
@@ -25,7 +26,7 @@ namespace ABC_Car_Traders.Views.Customer
             _carRepository = new CarRepository("Data Source=LAPTOP-KGH138OG;Initial Catalog=abc_car_traders;Integrated Security=True");
             originalDataTable = new DataTable();
             LoadCarData();
-           
+
         }
 
         private void LoadCarData()
@@ -84,20 +85,68 @@ namespace ABC_Car_Traders.Views.Customer
 
         private void btnCarOrder_Click(object sender, EventArgs e)
         {
-            //if (dgvCarDetails.SelectedRows.Count > 0)
-            //{
-            //    DataGridViewRow selectedRow = dgvCarDetails.SelectedRows[0];
-            //    int productId = Convert.ToInt32(selectedRow.Cells["ProductId"].Value); // Replace "ProductId" with your actual column name
-            //    int quantity = Convert.ToInt32(selectedRow.Cells["Quantity"].Value); // Replace "Quantity" with your actual column name
-            //    string orderType = selectedRow.Cells["OrderType"].Value.ToString(); // Replace "OrderType" with your actual column name
+            if (dgvCarDetails.SelectedRows.Count > 0)
+            {
+                try
+                {
+                    DataGridViewRow selectedRow = dgvCarDetails.SelectedRows[0];
 
-            //    _orderController.PlaceOrderFromDataGridView(_username, productId, quantity, orderType);
-            //    MessageBox.Show("Order placed successfully!");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Please select a row to place an order.");
-            //}
+                    // Validate and convert cell values
+                    int productId;
+                    if (!int.TryParse(selectedRow.Cells["CarID"].Value?.ToString(), out productId))
+                    {
+                        MessageBox.Show("Invalid product ID.");
+                        return;
+                    }
+
+                    string productName = selectedRow.Cells["CarName"].Value?.ToString();
+                    string model = selectedRow.Cells["Model"].Value?.ToString();
+                    string brand = selectedRow.Cells["Brand"].Value?.ToString();
+
+                    decimal price;
+                    if (!decimal.TryParse(selectedRow.Cells["SellingPrice"].Value?.ToString(), out price))
+                    {
+                        MessageBox.Show("Invalid price.");
+                        return;
+                    }
+
+                    // Check if the selected customer exists
+                    int customerId = 7; 
+                    if (customerId == 0)
+                    {
+                        MessageBox.Show("Invalid customer.");
+                        return;
+                    }
+
+                    // Create the OrderItem object
+                    OrderItem orderItem = new OrderItem
+                    {
+                        CustomerID = customerId,
+                        CustomerName = "", 
+                        ProductID = productId,
+                        ProductName = productName,
+                        Model = model,
+                        Brand = brand,
+                        Price = price,
+                        OrderDate = DateTime.Now, 
+                        Status = 0 
+                    };
+
+                    // Assuming you have access to orderController, replace with actual instance creation if necessary
+                    OrderController orderController = new OrderController("Data Source=LAPTOP-KGH138OG;Initial Catalog=abc_car_traders;Integrated Security=True");
+                    orderController.RegisterOrderItem(orderItem);
+
+                    MessageBox.Show("Order placed successfully!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Failed to place order: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to place an order.");
+            }
         }
     }
 }
