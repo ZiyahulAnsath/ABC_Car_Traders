@@ -15,18 +15,35 @@ namespace ABC_Car_Traders.DataAccess
         {
             using (var connection = new SqlConnection(connectionString))
             {
-                connection.Open();
-                var query = "SELECT COUNT(*) FROM Customers WHERE Username = @Username AND Password = @Password";
-                using (var command = new SqlCommand(query, connection))
+                try
                 {
-                    command.Parameters.AddWithValue("@Username", username);
-                    command.Parameters.AddWithValue("@Password", password);
-                    return (int)command.ExecuteScalar() > 0;
+                    connection.Open();
+                    var query = "SELECT Password FROM Customers WHERE Username = @Username";
+                    using (var command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Username", username);
+                        var hashedPassword = (string)command.ExecuteScalar();
+
+                        if (hashedPassword != null)
+                        {
+                            // Hash the provided password for comparison
+                            string hashedInputPassword = PasswordHelper.HashPassword(password);
+
+                            // Compare the hashed passwords
+                            if (hashedPassword == hashedInputPassword)
+                            {
+                                return true;
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error during customer login: " + ex.Message);
                 }
             }
+            return false;
         }
-
-
 
         //New Cutomer Registration Functionality 
         public void InsertCustomer(Customer customer)
@@ -157,6 +174,22 @@ namespace ABC_Car_Traders.DataAccess
                 var query = "SELECT COUNT(*) FROM Customers";
                 using (var command = new SqlCommand(query, connection))
                 {
+                    return (int)command.ExecuteScalar();
+                }
+            }
+        }
+
+
+        // Get customer ID by username
+        public int GetCustomerIdByUsername(string username)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "SELECT CustomerID FROM Customers WHERE Username = @Username";
+                using (var command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Username", username);
                     return (int)command.ExecuteScalar();
                 }
             }

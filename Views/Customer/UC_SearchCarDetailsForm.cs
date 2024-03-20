@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ABC_Car_Traders.DataAccess;
+using ABC_Car_Traders.Controllers;
 
 namespace ABC_Car_Traders.Views.Customer
 {
@@ -17,17 +18,16 @@ namespace ABC_Car_Traders.Views.Customer
         private readonly CarRepository _carRepository;
         private DataTable originalDataTable;
 
+
         public UC_SearchCarDetailsForm()
         {
             InitializeComponent();
             _carRepository = new CarRepository("Data Source=LAPTOP-KGH138OG;Initial Catalog=abc_car_traders;Integrated Security=True");
             originalDataTable = new DataTable();
             LoadCarData();
-
+           
         }
 
-
-        //Load All Car Details
         private void LoadCarData()
         {
             try
@@ -81,8 +81,23 @@ namespace ABC_Car_Traders.Views.Customer
                 dgvCarDetails.DataSource = originalDataTable;
             }
         }
+
+        private void btnCarOrder_Click(object sender, EventArgs e)
+        {
+            //if (dgvCarDetails.SelectedRows.Count > 0)
+            //{
+            //    DataGridViewRow selectedRow = dgvCarDetails.SelectedRows[0];
+            //    int productId = Convert.ToInt32(selectedRow.Cells["ProductId"].Value); // Replace "ProductId" with your actual column name
+            //    int quantity = Convert.ToInt32(selectedRow.Cells["Quantity"].Value); // Replace "Quantity" with your actual column name
+            //    string orderType = selectedRow.Cells["OrderType"].Value.ToString(); // Replace "OrderType" with your actual column name
+
+            //    _orderController.PlaceOrderFromDataGridView(_username, productId, quantity, orderType);
+            //    MessageBox.Show("Order placed successfully!");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Please select a row to place an order.");
+            //}
+        }
     }
-
-
-
 }

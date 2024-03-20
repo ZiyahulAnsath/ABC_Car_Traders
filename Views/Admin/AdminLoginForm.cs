@@ -32,27 +32,36 @@ namespace ABC_Car_Traders.Views.Admin
             this.Hide();
         }
 
+        private void clearData()
+        {
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+
+            txtUsername.Focus();
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-        
 
-                if (rbAdmin.Checked) 
+
+            if (rbAdmin.Checked)
+            {
+                // Check credentials in admin table
+                if (adminController.ValidateAdminLogin(username, password))
                 {
-                    // Check credentials in admin table
-                    if (adminController.ValidateAdminLogin(username, password))
-                    {
-                        Dashboard adminDashboard = new Dashboard();
-                        adminDashboard.Show();
-                        this.Hide(); 
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid username or password for admin.");
-                    }
+                    Dashboard adminDashboard = new Dashboard();
+                    adminDashboard.Show();
+                    this.Hide();
                 }
-            else if (rbCustomer.Checked) 
+                else
+                {
+                    MessageBox.Show("Invalid username or password for admin.");
+                    clearData();
+                }
+            }
+            else if (rbCustomer.Checked)
             {
                 // Check credentials in customer table
                 if (customerController.ValidateCustomerLogin(username, password))
@@ -65,12 +74,13 @@ namespace ABC_Car_Traders.Views.Admin
                 else
                 {
                     MessageBox.Show("Invalid username or password for customer.");
+                    clearData();
                 }
             }
             else
-                {
-                    MessageBox.Show("Please select user type (admin/customer).");
-                }
+            {
+                MessageBox.Show("Please select user type (admin/customer).");
+            }
 
             //}
         }

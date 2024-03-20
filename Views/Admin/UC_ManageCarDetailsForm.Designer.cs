@@ -29,13 +29,11 @@ namespace ABC_Car_Traders.Views.Admin
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_ManageCarDetailsForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_ManageCarDetailsForm));
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.deleteSelectedVehicle = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
@@ -79,62 +77,6 @@ namespace ABC_Car_Traders.Views.Admin
             this.label1.Text = "Manage Car Details";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2Button2
-            // 
-            this.guna2Button2.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button2.BorderRadius = 5;
-            this.guna2Button2.BorderThickness = 2;
-            this.guna2Button2.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
-            this.guna2Button2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Button2.FillColor = System.Drawing.Color.Empty;
-            this.guna2Button2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button2.HoverState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.Black;
-            this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button2.ImageOffset = new System.Drawing.Point(10, 0);
-            this.guna2Button2.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button2.Location = new System.Drawing.Point(29, 3);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(233, 50);
-            this.guna2Button2.TabIndex = 29;
-            this.guna2Button2.Text = "VIEW ALL VEHICLE";
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button3.BorderRadius = 5;
-            this.guna2Button3.BorderThickness = 2;
-            this.guna2Button3.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
-            this.guna2Button3.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Button3.FillColor = System.Drawing.Color.Empty;
-            this.guna2Button3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button3.HoverState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button3.HoverState.FillColor = System.Drawing.Color.Black;
-            this.guna2Button3.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button3.ImageOffset = new System.Drawing.Point(10, 0);
-            this.guna2Button3.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button3.Location = new System.Drawing.Point(294, 3);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(233, 50);
-            this.guna2Button3.TabIndex = 29;
-            this.guna2Button3.Text = "EDIT SELECTED VEHICLE";
-            // 
             // guna2Button4
             // 
             this.guna2Button4.BorderColor = System.Drawing.Color.WhiteSmoke;
@@ -154,10 +96,10 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button4.HoverState.CustomBorderColor = System.Drawing.Color.Red;
             this.guna2Button4.HoverState.FillColor = System.Drawing.Color.Black;
             this.guna2Button4.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button4.ImageOffset = new System.Drawing.Point(10, 0);
-            this.guna2Button4.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button4.Location = new System.Drawing.Point(559, 3);
+            this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
+            this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button4.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2Button4.Location = new System.Drawing.Point(294, 3);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.Size = new System.Drawing.Size(233, 50);
             this.guna2Button4.TabIndex = 29;
@@ -182,10 +124,11 @@ namespace ABC_Car_Traders.Views.Admin
             this.deleteSelectedVehicle.HoverState.CustomBorderColor = System.Drawing.Color.Red;
             this.deleteSelectedVehicle.HoverState.FillColor = System.Drawing.Color.Black;
             this.deleteSelectedVehicle.HoverState.ForeColor = System.Drawing.Color.White;
-            this.deleteSelectedVehicle.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.deleteSelectedVehicle.ImageOffset = new System.Drawing.Point(10, 0);
-            this.deleteSelectedVehicle.ImageSize = new System.Drawing.Size(40, 40);
-            this.deleteSelectedVehicle.Location = new System.Drawing.Point(824, 3);
+            this.deleteSelectedVehicle.Image = ((System.Drawing.Image)(resources.GetObject("deleteSelectedVehicle.Image")));
+            this.deleteSelectedVehicle.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.deleteSelectedVehicle.ImageSize = new System.Drawing.Size(25, 25);
+            this.deleteSelectedVehicle.IndicateFocus = true;
+            this.deleteSelectedVehicle.Location = new System.Drawing.Point(559, 3);
             this.deleteSelectedVehicle.Name = "deleteSelectedVehicle";
             this.deleteSelectedVehicle.Size = new System.Drawing.Size(233, 50);
             this.deleteSelectedVehicle.TabIndex = 29;
@@ -235,12 +178,10 @@ namespace ABC_Car_Traders.Views.Admin
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.943463F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.66784F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.943463F));
-            this.tableLayoutPanel4.Controls.Add(this.guna2Button2, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.guna2Button3, 3, 0);
-            this.tableLayoutPanel4.Controls.Add(this.guna2Button4, 5, 0);
-            this.tableLayoutPanel4.Controls.Add(this.deleteSelectedVehicle, 7, 0);
             this.tableLayoutPanel4.Controls.Add(this.guna2Button6, 9, 0);
-            this.tableLayoutPanel4.Controls.Add(this.guna2Button7, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.guna2Button4, 3, 0);
+            this.tableLayoutPanel4.Controls.Add(this.guna2Button7, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.deleteSelectedVehicle, 5, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 28);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -271,10 +212,10 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button7.HoverState.CustomBorderColor = System.Drawing.Color.Red;
             this.guna2Button7.HoverState.FillColor = System.Drawing.Color.Black;
             this.guna2Button7.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button7.ImageOffset = new System.Drawing.Point(10, 0);
-            this.guna2Button7.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button7.Location = new System.Drawing.Point(29, 71);
+            this.guna2Button7.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button7.Image")));
+            this.guna2Button7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button7.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2Button7.Location = new System.Drawing.Point(29, 3);
             this.guna2Button7.Name = "guna2Button7";
             this.guna2Button7.Size = new System.Drawing.Size(233, 50);
             this.guna2Button7.TabIndex = 29;
@@ -471,10 +412,12 @@ namespace ABC_Car_Traders.Views.Admin
             this.btnAddCar.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
             this.btnAddCar.HoverState.FillColor = System.Drawing.Color.White;
             this.btnAddCar.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
-            this.btnAddCar.Location = new System.Drawing.Point(1037, 15);
+            this.btnAddCar.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCar.Image")));
+            this.btnAddCar.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnAddCar.Location = new System.Drawing.Point(1023, 15);
             this.btnAddCar.Name = "btnAddCar";
             this.btnAddCar.ShadowDecoration.Color = System.Drawing.Color.White;
-            this.btnAddCar.Size = new System.Drawing.Size(228, 64);
+            this.btnAddCar.Size = new System.Drawing.Size(257, 64);
             this.btnAddCar.TabIndex = 33;
             this.btnAddCar.Text = "ADD NEW CAR";
             this.btnAddCar.Click += new System.EventHandler(this.btnAddCar_Click);
@@ -528,8 +471,6 @@ namespace ABC_Car_Traders.Views.Admin
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button deleteSelectedVehicle;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;

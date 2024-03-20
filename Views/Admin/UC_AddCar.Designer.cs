@@ -123,7 +123,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.rtxtDescription.Location = new System.Drawing.Point(50, 44);
             this.rtxtDescription.Name = "rtxtDescription";
             this.rtxtDescription.Size = new System.Drawing.Size(711, 70);
-            this.rtxtDescription.TabIndex = 45;
+            this.rtxtDescription.TabIndex = 9;
             this.rtxtDescription.Text = "";
             // 
             // label13
@@ -183,7 +183,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.btnSave.Location = new System.Drawing.Point(218, 9);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(172, 59);
-            this.btnSave.TabIndex = 39;
+            this.btnSave.TabIndex = 10;
             this.btnSave.Text = "SAVE ";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -214,7 +214,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.btnClear.Location = new System.Drawing.Point(3, 9);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(170, 59);
-            this.btnClear.TabIndex = 38;
+            this.btnClear.TabIndex = 11;
             this.btnClear.Text = "CLEAR";
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
@@ -349,7 +349,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.cmbBrand.Location = new System.Drawing.Point(3, 51);
             this.cmbBrand.Name = "cmbBrand";
             this.cmbBrand.Size = new System.Drawing.Size(392, 36);
-            this.cmbBrand.TabIndex = 19;
+            this.cmbBrand.TabIndex = 1;
             this.cmbBrand.TextOffset = new System.Drawing.Point(15, 10);
             // 
             // tableLayoutPanel4
@@ -423,7 +423,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.cmbModel.Location = new System.Drawing.Point(3, 51);
             this.cmbModel.Name = "cmbModel";
             this.cmbModel.Size = new System.Drawing.Size(392, 36);
-            this.cmbModel.TabIndex = 20;
+            this.cmbModel.TabIndex = 2;
             this.cmbModel.TextOffset = new System.Drawing.Point(15, 10);
             // 
             // label11
@@ -496,7 +496,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.txtVehicleName.PlaceholderText = "";
             this.txtVehicleName.SelectedText = "";
             this.txtVehicleName.Size = new System.Drawing.Size(392, 57);
-            this.txtVehicleName.TabIndex = 39;
+            this.txtVehicleName.TabIndex = 3;
             this.txtVehicleName.TextOffset = new System.Drawing.Point(15, 10);
             // 
             // tableLayoutPanel6
@@ -529,7 +529,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.carDateTimePicker.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.carDateTimePicker.Name = "carDateTimePicker";
             this.carDateTimePicker.Size = new System.Drawing.Size(392, 59);
-            this.carDateTimePicker.TabIndex = 22;
+            this.carDateTimePicker.TabIndex = 6;
             this.carDateTimePicker.Value = new System.DateTime(2024, 3, 2, 12, 5, 45, 782);
             // 
             // label14
@@ -602,7 +602,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.txtSellingPrice.PlaceholderText = "";
             this.txtSellingPrice.SelectedText = "";
             this.txtSellingPrice.Size = new System.Drawing.Size(392, 57);
-            this.txtSellingPrice.TabIndex = 39;
+            this.txtSellingPrice.TabIndex = 5;
             this.txtSellingPrice.TextOffset = new System.Drawing.Point(15, 10);
             // 
             // tableLayoutPanel11
@@ -660,7 +660,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.txtBuyPrice.PlaceholderText = "";
             this.txtBuyPrice.SelectedText = "";
             this.txtBuyPrice.Size = new System.Drawing.Size(392, 57);
-            this.txtBuyPrice.TabIndex = 39;
+            this.txtBuyPrice.TabIndex = 4;
             this.txtBuyPrice.TextOffset = new System.Drawing.Point(15, 10);
             // 
             // tableLayoutPanel10
@@ -709,7 +709,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.cmbColor.Location = new System.Drawing.Point(3, 51);
             this.cmbColor.Name = "cmbColor";
             this.cmbColor.Size = new System.Drawing.Size(392, 36);
-            this.cmbColor.TabIndex = 20;
+            this.cmbColor.TabIndex = 7;
             this.cmbColor.TextOffset = new System.Drawing.Point(15, 10);
             // 
             // label17
@@ -765,7 +765,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.cmbFualType.Location = new System.Drawing.Point(3, 51);
             this.cmbFualType.Name = "cmbFualType";
             this.cmbFualType.Size = new System.Drawing.Size(392, 36);
-            this.cmbFualType.TabIndex = 20;
+            this.cmbFualType.TabIndex = 8;
             this.cmbFualType.TextOffset = new System.Drawing.Point(15, 10);
             // 
             // label18

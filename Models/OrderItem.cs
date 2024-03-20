@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace ABC_Car_Traders.Models
 {
-    class OrderItem
+    public class OrderItem
     {
+        public int OrderID { get; set; }
+        public int CustomerID { get; set; } 
+        public int CustomerName { get; set; } 
+        public int ProductID { get; set; } 
+        public int ProductName { get; set; }
+        public int Model { get; set; }
+        public int Brand { get; set; }
+        public int Price { get; set; }
+        public int OrderDate { get; set; }
+        public int Status { get; set; }
     }
 }

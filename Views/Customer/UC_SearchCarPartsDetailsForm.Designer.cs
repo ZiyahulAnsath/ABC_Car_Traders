@@ -196,6 +196,7 @@ namespace ABC_Car_Traders.Views.Customer
             this.dgvCarPartsDetails.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvCarPartsDetails.Location = new System.Drawing.Point(3, 33);
             this.dgvCarPartsDetails.Name = "dgvCarPartsDetails";
+            this.dgvCarPartsDetails.ReadOnly = true;
             this.dgvCarPartsDetails.RowHeadersVisible = false;
             this.dgvCarPartsDetails.RowHeadersWidth = 51;
             this.dgvCarPartsDetails.RowTemplate.Height = 24;
@@ -214,7 +215,7 @@ namespace ABC_Car_Traders.Views.Customer
             this.dgvCarPartsDetails.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvCarPartsDetails.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvCarPartsDetails.ThemeStyle.HeaderStyle.Height = 40;
-            this.dgvCarPartsDetails.ThemeStyle.ReadOnly = false;
+            this.dgvCarPartsDetails.ThemeStyle.ReadOnly = true;
             this.dgvCarPartsDetails.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvCarPartsDetails.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvCarPartsDetails.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

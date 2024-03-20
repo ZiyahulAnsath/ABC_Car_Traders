@@ -210,7 +210,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.groupBox1.Location = new System.Drawing.Point(808, 128);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(426, 77);
-            this.groupBox1.TabIndex = 43;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Must Be Choose The Role ";
             // 
@@ -227,7 +227,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.rbCustomer.Location = new System.Drawing.Point(269, 39);
             this.rbCustomer.Name = "rbCustomer";
             this.rbCustomer.Size = new System.Drawing.Size(131, 28);
-            this.rbCustomer.TabIndex = 42;
+            this.rbCustomer.TabIndex = 3;
             this.rbCustomer.Text = "Customer";
             this.rbCustomer.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rbCustomer.UncheckedState.BorderThickness = 2;
@@ -247,7 +247,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.rbAdmin.Location = new System.Drawing.Point(42, 39);
             this.rbAdmin.Name = "rbAdmin";
             this.rbAdmin.Size = new System.Drawing.Size(98, 28);
-            this.rbAdmin.TabIndex = 42;
+            this.rbAdmin.TabIndex = 2;
             this.rbAdmin.Text = "Admin";
             this.rbAdmin.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rbAdmin.UncheckedState.BorderThickness = 2;
@@ -357,7 +357,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.btnLogin.Location = new System.Drawing.Point(1006, 519);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(228, 59);
-            this.btnLogin.TabIndex = 35;
+            this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.TextOffset = new System.Drawing.Point(-20, 0);
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -387,7 +387,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.txtPassword.PlaceholderText = "";
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(431, 48);
-            this.txtPassword.TabIndex = 3;
+            this.txtPassword.TabIndex = 4;
             // 
             // label3
             // 
@@ -398,7 +398,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.label3.Location = new System.Drawing.Point(803, 360);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(131, 29);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 290;
             this.label3.Text = "Password";
             // 
             // txtUsername
@@ -427,7 +427,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.txtUsername.PlaceholderText = "";
             this.txtUsername.SelectedText = "";
             this.txtUsername.Size = new System.Drawing.Size(431, 48);
-            this.txtUsername.TabIndex = 3;
+            this.txtUsername.TabIndex = 4;
             // 
             // label2
             // 
@@ -438,7 +438,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.label2.Location = new System.Drawing.Point(803, 241);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(136, 29);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 28;
             this.label2.Text = "Username";
             // 
             // AdminLoginForm

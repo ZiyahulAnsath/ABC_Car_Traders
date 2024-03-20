@@ -135,7 +135,7 @@ namespace ABC_Car_Traders.Views.Customer
             this.txtAddress.PlaceholderText = "";
             this.txtAddress.SelectedText = "";
             this.txtAddress.Size = new System.Drawing.Size(359, 84);
-            this.txtAddress.TabIndex = 3;
+            this.txtAddress.TabIndex = 2;
             // 
             // label6
             // 
@@ -201,7 +201,7 @@ namespace ABC_Car_Traders.Views.Customer
             this.txtUsername.PlaceholderText = "";
             this.txtUsername.SelectedText = "";
             this.txtUsername.Size = new System.Drawing.Size(359, 38);
-            this.txtUsername.TabIndex = 3;
+            this.txtUsername.TabIndex = 7;
             // 
             // txtName
             // 
@@ -228,7 +228,7 @@ namespace ABC_Car_Traders.Views.Customer
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(359, 38);
-            this.txtName.TabIndex = 3;
+            this.txtName.TabIndex = 1;
             // 
             // label3
             // 
@@ -266,7 +266,7 @@ namespace ABC_Car_Traders.Views.Customer
             this.txtPassword.PlaceholderText = "";
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(359, 38);
-            this.txtPassword.TabIndex = 3;
+            this.txtPassword.TabIndex = 8;
             // 
             // btnRegisterCustomer
             // 
@@ -295,7 +295,7 @@ namespace ABC_Car_Traders.Views.Customer
             this.btnRegisterCustomer.Location = new System.Drawing.Point(1046, 610);
             this.btnRegisterCustomer.Name = "btnRegisterCustomer";
             this.btnRegisterCustomer.Size = new System.Drawing.Size(228, 59);
-            this.btnRegisterCustomer.TabIndex = 35;
+            this.btnRegisterCustomer.TabIndex = 9;
             this.btnRegisterCustomer.Text = "REGISTER";
             this.btnRegisterCustomer.TextOffset = new System.Drawing.Point(-20, 0);
             this.btnRegisterCustomer.Click += new System.EventHandler(this.btnRegisterCustomer_Click);
@@ -338,7 +338,7 @@ namespace ABC_Car_Traders.Views.Customer
             this.groupBox1.Location = new System.Drawing.Point(773, 354);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(501, 63);
-            this.groupBox1.TabIndex = 43;
+            this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gender";
             // 
@@ -355,7 +355,7 @@ namespace ABC_Car_Traders.Views.Customer
             this.rbFemale.Location = new System.Drawing.Point(303, 22);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(105, 28);
-            this.rbFemale.TabIndex = 42;
+            this.rbFemale.TabIndex = 6;
             this.rbFemale.Text = "Female";
             this.rbFemale.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rbFemale.UncheckedState.BorderThickness = 2;
@@ -375,7 +375,7 @@ namespace ABC_Car_Traders.Views.Customer
             this.rbMale.Location = new System.Drawing.Point(142, 22);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(80, 28);
-            this.rbMale.TabIndex = 42;
+            this.rbMale.TabIndex = 5;
             this.rbMale.Text = "Male";
             this.rbMale.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rbMale.UncheckedState.BorderThickness = 2;

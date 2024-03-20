@@ -13,6 +13,7 @@ namespace ABC_Car_Traders.Views.Customer
 {
     public partial class CustomerDashboard : Form
     {
+       
         public CustomerDashboard()
         {
             InitializeComponent();

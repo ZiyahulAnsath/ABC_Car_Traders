@@ -115,7 +115,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.rtxtDescription.Location = new System.Drawing.Point(50, 44);
             this.rtxtDescription.Name = "rtxtDescription";
             this.rtxtDescription.Size = new System.Drawing.Size(711, 70);
-            this.rtxtDescription.TabIndex = 45;
+            this.rtxtDescription.TabIndex = 7;
             this.rtxtDescription.Text = "";
             // 
             // label13
@@ -175,7 +175,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.btnSaveParts.Location = new System.Drawing.Point(218, 9);
             this.btnSaveParts.Name = "btnSaveParts";
             this.btnSaveParts.Size = new System.Drawing.Size(172, 59);
-            this.btnSaveParts.TabIndex = 39;
+            this.btnSaveParts.TabIndex = 8;
             this.btnSaveParts.Text = "SAVE ";
             this.btnSaveParts.Click += new System.EventHandler(this.btnSaveParts_Click);
             // 
@@ -206,7 +206,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.btnClear.Location = new System.Drawing.Point(3, 9);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(170, 59);
-            this.btnClear.TabIndex = 38;
+            this.btnClear.TabIndex = 9;
             this.btnClear.Text = "CLEAR";
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
@@ -338,7 +338,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.cmbBrand.Location = new System.Drawing.Point(3, 52);
             this.cmbBrand.Name = "cmbBrand";
             this.cmbBrand.Size = new System.Drawing.Size(392, 36);
-            this.cmbBrand.TabIndex = 19;
+            this.cmbBrand.TabIndex = 1;
             this.cmbBrand.TextOffset = new System.Drawing.Point(15, 10);
             // 
             // tableLayoutPanel4
@@ -412,7 +412,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.cmbModel.Location = new System.Drawing.Point(3, 52);
             this.cmbModel.Name = "cmbModel";
             this.cmbModel.Size = new System.Drawing.Size(392, 36);
-            this.cmbModel.TabIndex = 20;
+            this.cmbModel.TabIndex = 2;
             this.cmbModel.TextOffset = new System.Drawing.Point(15, 10);
             // 
             // label11
@@ -485,7 +485,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.txtPartsName.PlaceholderText = "";
             this.txtPartsName.SelectedText = "";
             this.txtPartsName.Size = new System.Drawing.Size(392, 58);
-            this.txtPartsName.TabIndex = 39;
+            this.txtPartsName.TabIndex = 3;
             this.txtPartsName.TextOffset = new System.Drawing.Point(15, 10);
             // 
             // tableLayoutPanel6
@@ -518,7 +518,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.partsDateTimePiccker.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.partsDateTimePiccker.Name = "partsDateTimePiccker";
             this.partsDateTimePiccker.Size = new System.Drawing.Size(392, 60);
-            this.partsDateTimePiccker.TabIndex = 22;
+            this.partsDateTimePiccker.TabIndex = 6;
             this.partsDateTimePiccker.Value = new System.DateTime(2024, 3, 2, 12, 5, 45, 782);
             // 
             // label14
@@ -591,7 +591,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.txtSellingPrice.PlaceholderText = "";
             this.txtSellingPrice.SelectedText = "";
             this.txtSellingPrice.Size = new System.Drawing.Size(392, 58);
-            this.txtSellingPrice.TabIndex = 39;
+            this.txtSellingPrice.TabIndex = 5;
             this.txtSellingPrice.TextOffset = new System.Drawing.Point(15, 10);
             // 
             // tableLayoutPanel11
@@ -649,7 +649,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.txtBuyPrice.PlaceholderText = "";
             this.txtBuyPrice.SelectedText = "";
             this.txtBuyPrice.Size = new System.Drawing.Size(392, 58);
-            this.txtBuyPrice.TabIndex = 39;
+            this.txtBuyPrice.TabIndex = 4;
             this.txtBuyPrice.TextOffset = new System.Drawing.Point(15, 10);
             // 
             // UC_AddParts
