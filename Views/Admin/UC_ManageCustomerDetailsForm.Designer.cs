@@ -42,10 +42,10 @@ namespace ABC_Car_Traders.Views.Admin
             this.btnAddCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPrintCustomers = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.btnDeleteCustomer = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvCustomerDetails = new Guna.UI2.WinForms.Guna2DataGridView();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -221,7 +221,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.66784F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.943463F));
             this.tableLayoutPanel4.Controls.Add(this.guna2Button6, 9, 0);
-            this.tableLayoutPanel4.Controls.Add(this.guna2Button7, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnPrintCustomers, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.guna2Button4, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnDeleteCustomer, 5, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -234,6 +234,64 @@ namespace ABC_Car_Traders.Views.Admin
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.016395F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1364, 149);
             this.tableLayoutPanel4.TabIndex = 0;
+            // 
+            // guna2Button6
+            // 
+            this.guna2Button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2Button6.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Button6.BorderRadius = 5;
+            this.guna2Button6.BorderThickness = 2;
+            this.guna2Button6.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.guna2Button6.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
+            this.guna2Button6.CustomBorderThickness = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Button6.FillColor = System.Drawing.Color.Empty;
+            this.guna2Button6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button6.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Button6.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.guna2Button6.HoverState.FillColor = System.Drawing.Color.Black;
+            this.guna2Button6.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.guna2Button6.ImageOffset = new System.Drawing.Point(10, 0);
+            this.guna2Button6.ImageSize = new System.Drawing.Size(40, 40);
+            this.guna2Button6.Location = new System.Drawing.Point(1093, 3);
+            this.guna2Button6.Name = "guna2Button6";
+            this.guna2Button6.Size = new System.Drawing.Size(234, 55);
+            this.guna2Button6.TabIndex = 29;
+            this.guna2Button6.Text = "<< PREVIOUS";
+            // 
+            // btnPrintCustomers
+            // 
+            this.btnPrintCustomers.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnPrintCustomers.BorderRadius = 5;
+            this.btnPrintCustomers.BorderThickness = 2;
+            this.btnPrintCustomers.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.btnPrintCustomers.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
+            this.btnPrintCustomers.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
+            this.btnPrintCustomers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrintCustomers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrintCustomers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPrintCustomers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPrintCustomers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPrintCustomers.FillColor = System.Drawing.Color.Empty;
+            this.btnPrintCustomers.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintCustomers.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnPrintCustomers.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.btnPrintCustomers.HoverState.FillColor = System.Drawing.Color.Black;
+            this.btnPrintCustomers.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnPrintCustomers.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintCustomers.Image")));
+            this.btnPrintCustomers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnPrintCustomers.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnPrintCustomers.Location = new System.Drawing.Point(29, 3);
+            this.btnPrintCustomers.Name = "btnPrintCustomers";
+            this.btnPrintCustomers.Size = new System.Drawing.Size(234, 55);
+            this.btnPrintCustomers.TabIndex = 29;
+            this.btnPrintCustomers.Text = "REPORT ALL CUSTOMERS";
+            this.btnPrintCustomers.Click += new System.EventHandler(this.btnPrintCustomers_Click);
             // 
             // guna2Button4
             // 
@@ -291,63 +349,6 @@ namespace ABC_Car_Traders.Views.Admin
             this.btnDeleteCustomer.TabIndex = 29;
             this.btnDeleteCustomer.Text = "DELETE SELECTED CUSTOMER";
             this.btnDeleteCustomer.Click += new System.EventHandler(this.btnDeleteCustomer_Click);
-            // 
-            // guna2Button6
-            // 
-            this.guna2Button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2Button6.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button6.BorderRadius = 5;
-            this.guna2Button6.BorderThickness = 2;
-            this.guna2Button6.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button6.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
-            this.guna2Button6.CustomBorderThickness = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Button6.FillColor = System.Drawing.Color.Empty;
-            this.guna2Button6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button6.HoverState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button6.HoverState.FillColor = System.Drawing.Color.Black;
-            this.guna2Button6.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button6.ImageOffset = new System.Drawing.Point(10, 0);
-            this.guna2Button6.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button6.Location = new System.Drawing.Point(1093, 3);
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(234, 55);
-            this.guna2Button6.TabIndex = 29;
-            this.guna2Button6.Text = "<< PREVIOUS";
-            // 
-            // guna2Button7
-            // 
-            this.guna2Button7.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button7.BorderRadius = 5;
-            this.guna2Button7.BorderThickness = 2;
-            this.guna2Button7.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button7.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
-            this.guna2Button7.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Button7.FillColor = System.Drawing.Color.Empty;
-            this.guna2Button7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button7.HoverState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button7.HoverState.FillColor = System.Drawing.Color.Black;
-            this.guna2Button7.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button7.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button7.Image")));
-            this.guna2Button7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button7.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button7.Location = new System.Drawing.Point(29, 3);
-            this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.Size = new System.Drawing.Size(234, 55);
-            this.guna2Button7.TabIndex = 29;
-            this.guna2Button7.Text = "REPORT ALL CUSTOMERS";
             // 
             // tableLayoutPanel3
             // 
@@ -482,7 +483,7 @@ namespace ABC_Car_Traders.Views.Admin
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button btnDeleteCustomer;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
-        private Guna.UI2.WinForms.Guna2Button guna2Button7;
+        private Guna.UI2.WinForms.Guna2Button btnPrintCustomers;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private Guna.UI2.WinForms.Guna2DataGridView dgvCustomerDetails;
         private System.Windows.Forms.SplitContainer splitContainer1;

@@ -48,7 +48,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.dgvOrderDetails = new Guna.UI2.WinForms.Guna2DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPrintAllOrders = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
@@ -349,6 +349,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.dgvOrderDetails.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvOrderDetails.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvOrderDetails.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrderDetails_CellEndEdit);
+            this.dgvOrderDetails.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvOrderDetails_CellFormatting);
             // 
             // groupBox1
             // 
@@ -378,7 +379,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.943463F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.66784F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.943463F));
-            this.tableLayoutPanel4.Controls.Add(this.guna2Button3, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnPrintAllOrders, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.guna2Button4, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.guna2Button5, 5, 0);
             this.tableLayoutPanel4.Controls.Add(this.guna2Button6, 7, 0);
@@ -396,33 +397,34 @@ namespace ABC_Car_Traders.Views.Admin
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1342, 151);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
-            // guna2Button3
+            // btnPrintAllOrders
             // 
-            this.guna2Button3.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button3.BorderRadius = 5;
-            this.guna2Button3.BorderThickness = 2;
-            this.guna2Button3.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
-            this.guna2Button3.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Button3.FillColor = System.Drawing.Color.Empty;
-            this.guna2Button3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button3.HoverState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button3.HoverState.FillColor = System.Drawing.Color.Black;
-            this.guna2Button3.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button3.ImageOffset = new System.Drawing.Point(10, 0);
-            this.guna2Button3.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button3.Location = new System.Drawing.Point(29, 3);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(231, 55);
-            this.guna2Button3.TabIndex = 29;
-            this.guna2Button3.Text = "PRINT ALL VEHICLES DETAILS";
+            this.btnPrintAllOrders.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnPrintAllOrders.BorderRadius = 5;
+            this.btnPrintAllOrders.BorderThickness = 2;
+            this.btnPrintAllOrders.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.btnPrintAllOrders.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
+            this.btnPrintAllOrders.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
+            this.btnPrintAllOrders.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrintAllOrders.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrintAllOrders.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPrintAllOrders.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPrintAllOrders.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPrintAllOrders.FillColor = System.Drawing.Color.Empty;
+            this.btnPrintAllOrders.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintAllOrders.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnPrintAllOrders.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.btnPrintAllOrders.HoverState.FillColor = System.Drawing.Color.Black;
+            this.btnPrintAllOrders.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnPrintAllOrders.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnPrintAllOrders.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnPrintAllOrders.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnPrintAllOrders.Location = new System.Drawing.Point(29, 3);
+            this.btnPrintAllOrders.Name = "btnPrintAllOrders";
+            this.btnPrintAllOrders.Size = new System.Drawing.Size(231, 55);
+            this.btnPrintAllOrders.TabIndex = 29;
+            this.btnPrintAllOrders.Text = "PRINT ALL VEHICLES DETAILS";
+            this.btnPrintAllOrders.Click += new System.EventHandler(this.btnPrintAllOrders_Click);
             // 
             // guna2Button4
             // 
@@ -638,7 +640,7 @@ namespace ABC_Car_Traders.Views.Admin
         private Guna.UI2.WinForms.Guna2DataGridView dgvOrderDetails;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btnPrintAllOrders;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;

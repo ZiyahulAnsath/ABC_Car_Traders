@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ABC_Car_Traders.DataAccess;
+using ABC_orderItem_Traders.DataAccess;
 
 namespace ABC_Car_Traders.Views.Admin
 {
@@ -20,6 +21,7 @@ namespace ABC_Car_Traders.Views.Admin
         private readonly CarRepository _carRepository;
         private readonly CarPartRepository _carPartRepository;
         private readonly CustomerRepository _customerRepository;
+        private readonly OrderRepository _orderRepository;
 
 
         public UC_MainDashboard()
@@ -28,6 +30,7 @@ namespace ABC_Car_Traders.Views.Admin
             _carRepository = new CarRepository("Data Source=LAPTOP-KGH138OG;Initial Catalog=abc_car_traders;Integrated Security=True");
             _carPartRepository = new CarPartRepository("Data Source=LAPTOP-KGH138OG;Initial Catalog=abc_car_traders;Integrated Security=True");
             _customerRepository = new CustomerRepository();
+            _orderRepository = new OrderRepository("Data Source=LAPTOP-KGH138OG;Initial Catalog=abc_car_traders;Integrated Security=True");
             UpdateLabels();
         }
 
@@ -37,6 +40,7 @@ namespace ABC_Car_Traders.Views.Admin
             lblTotalCars.Text = _carRepository.GetTotalCarCount().ToString();
             lblTotalParts.Text = _carPartRepository.GetTotalCarPartCount().ToString();
             lblTotalCustomers.Text = _customerRepository.GetTotalCustomerCount().ToString();
+            lblTotalOrders.Text = _orderRepository.CountTotalOrders().ToString();
         }
     }
 }

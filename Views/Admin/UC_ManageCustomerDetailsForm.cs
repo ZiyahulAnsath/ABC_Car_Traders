@@ -4,6 +4,9 @@ using ABC_Car_Traders.DataAccess;
 using ABC_Car_Traders.Models;
 using System.Data;
 using System.Collections.Generic;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 
 namespace ABC_Car_Traders.Views.Admin
 {
@@ -126,7 +129,77 @@ namespace ABC_Car_Traders.Views.Admin
             }
         }
 
+        //print All Customers
+        public void allCustomers()
+        {
+            {
+                if (dgvCustomerDetails.Rows.Count == 0)
+                {
+                    MessageBox.Show("No Record found", "Info");
+                    return;
+                }
 
-        
+                SaveFileDialog save = new SaveFileDialog();
+                save.Filter = "PDF (*.pdf)|*.pdf";
+                save.FileName = "TotalCustomers.pdf";
+
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        using (FileStream fileStream = new FileStream(save.FileName, FileMode.Create))
+                        {
+                            Document document = new Document(PageSize.A4, 8f, 16f, 16f, 8f);
+                            PdfWriter.GetInstance(document, fileStream);
+                            document.Open();
+
+                            PdfPTable pdfTable = new PdfPTable(dgvCustomerDetails.Columns.Count);
+                            pdfTable.DefaultCell.Padding = 2;
+                            pdfTable.WidthPercentage = 100;
+                            pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+
+                            iTextSharp.text.Font headerFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12);
+
+                            foreach (DataGridViewColumn col in dgvCustomerDetails.Columns)
+                            {
+                                PdfPCell cell = new PdfPCell(new Phrase(col.HeaderText, headerFont));
+                                pdfTable.AddCell(cell);
+                            }
+
+                            iTextSharp.text.Font rowFont = FontFactory.GetFont("Monosarat", 10);
+
+                            foreach (DataGridViewRow row in dgvCustomerDetails.Rows)
+                            {
+                                foreach (DataGridViewCell cell in row.Cells)
+                                {
+                                    if (cell.Value != null)
+                                    {
+                                        pdfTable.AddCell(new Phrase(cell.Value.ToString(), rowFont));
+                                    }
+                                    else
+                                    {
+                                        pdfTable.AddCell(new Phrase("", rowFont));
+                                    }
+                                }
+                            }
+
+                            document.Add(pdfTable);
+                            document.Close();
+                        }
+
+                        MessageBox.Show("Data exported Successfully", "Info");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error while Exporting Data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void btnPrintCustomers_Click(object sender, EventArgs e)
+        {
+            allCustomers();
+        }
     }
 }

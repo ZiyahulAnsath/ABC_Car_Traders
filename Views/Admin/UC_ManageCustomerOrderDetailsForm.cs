@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ABC_orderItem_Traders.DataAccess;
 using ABC_Car_Traders.Models;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 
 namespace ABC_Car_Traders.Views.Admin
@@ -61,18 +64,17 @@ namespace ABC_Car_Traders.Views.Admin
         }
 
         //To List Customer Order Details from the Datagridview function
-        private DataTable ToDataTable<T>(IList<T> data)
+        private DataTable ToDataTable<T>(IEnumerable<T> data)
         {
             DataTable table = new DataTable();
-            foreach (var prop in typeof(T).GetProperties())
+            foreach (PropertyDescriptor prop in TypeDescriptor.GetProperties(typeof(T)))
             {
-                table.Columns.Add(prop.Name);
+                table.Columns.Add(prop.Name, Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType);
             }
-
             foreach (T item in data)
             {
                 DataRow row = table.NewRow();
-                foreach (var prop in typeof(T).GetProperties())
+                foreach (PropertyDescriptor prop in TypeDescriptor.GetProperties(typeof(T)))
                 {
                     row[prop.Name] = prop.GetValue(item) ?? DBNull.Value;
                 }
@@ -149,6 +151,115 @@ namespace ABC_Car_Traders.Views.Admin
             {
                 MessageBox.Show("Please select a row to delete", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+
+        //This events selected row exact status value and to show the understanable status
+        private void dgvOrderDetails_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == dgvOrderDetails.Columns["Status"].Index && e.RowIndex >= 0)
+            {
+                object value = e.Value;
+                if (value != DBNull.Value)
+                {
+                    int statusValue = Convert.ToInt32(value);
+                    string statusString = GetStatusString(statusValue);
+                    e.Value = statusString;
+                    e.FormattingApplied = true;
+                }
+                else
+                {
+                    e.Value = string.Empty;
+                    e.FormattingApplied = true;
+                }
+            }
+        }
+
+        //To pass the exact Status
+        private string GetStatusString(int statusValue)
+        {
+            switch (statusValue)
+            {
+                case 0:
+                    return "Pending";
+                case 1:
+                    return "Success";
+                case 2:
+                    return "Cancel";
+                default:
+                    return "Unknown";
+            }
+        }
+
+
+        //Print All the Value in PDF file format
+        public void allCustomerOrders()
+        {
+            if (dgvOrderDetails.Rows.Count == 0)
+            {
+                MessageBox.Show("No Record found", "Info");
+                return;
+            }
+
+            SaveFileDialog save = new SaveFileDialog();
+            save.Filter = "PDF (*.pdf)|*.pdf";
+            save.FileName = "CustomerTotalOrders.pdf";
+
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    using (FileStream fileStream = new FileStream(save.FileName, FileMode.Create))
+                    {
+                        Document document = new Document(PageSize.A4, 8f, 16f, 16f, 8f);
+                        PdfWriter.GetInstance(document, fileStream);
+                        document.Open();
+
+                        PdfPTable pdfTable = new PdfPTable(dgvOrderDetails.Columns.Count);
+                        pdfTable.DefaultCell.Padding = 2;
+                        pdfTable.WidthPercentage = 100;
+                        pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+
+                        iTextSharp.text.Font headerFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12);
+
+                        foreach (DataGridViewColumn col in dgvOrderDetails.Columns)
+                        {
+                            PdfPCell cell = new PdfPCell(new Phrase(col.HeaderText, headerFont));
+                            pdfTable.AddCell(cell);
+                        }
+
+                        iTextSharp.text.Font rowFont = FontFactory.GetFont("Monosarat", 10);
+
+                        foreach (DataGridViewRow row in dgvOrderDetails.Rows)
+                        {
+                            foreach (DataGridViewCell cell in row.Cells)
+                            {
+                                if (cell.Value != null)
+                                {
+                                    pdfTable.AddCell(new Phrase(cell.Value.ToString(), rowFont));
+                                }
+                                else
+                                {
+                                    pdfTable.AddCell(new Phrase("", rowFont));
+                                }
+                            }
+                        }
+
+                        document.Add(pdfTable);
+                        document.Close();
+                    }
+
+                    MessageBox.Show("Data exported Successfully", "Info");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error while Exporting Data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        private void btnPrintAllOrders_Click(object sender, EventArgs e)
+        {
+            allCustomerOrders();
         }
     }
 }

@@ -45,10 +45,10 @@ namespace ABC_Car_Traders.Views.Admin
             this.dgvCarPartsDetails = new Guna.UI2.WinForms.Guna2DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDeletePart = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPrintAllParts = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDeletePart = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -313,7 +313,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.943463F));
             this.tableLayoutPanel4.Controls.Add(this.guna2Button6, 9, 0);
             this.tableLayoutPanel4.Controls.Add(this.guna2Button4, 3, 0);
-            this.tableLayoutPanel4.Controls.Add(this.guna2Button7, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnPrintAllParts, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnDeletePart, 5, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 28);
@@ -325,65 +325,6 @@ namespace ABC_Car_Traders.Views.Admin
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.016395F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1366, 150);
             this.tableLayoutPanel4.TabIndex = 0;
-            // 
-            // guna2Button4
-            // 
-            this.guna2Button4.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button4.BorderRadius = 5;
-            this.guna2Button4.BorderThickness = 2;
-            this.guna2Button4.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
-            this.guna2Button4.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Button4.FillColor = System.Drawing.Color.Empty;
-            this.guna2Button4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button4.HoverState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button4.HoverState.FillColor = System.Drawing.Color.Black;
-            this.guna2Button4.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
-            this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button4.ImageOffset = new System.Drawing.Point(10, 0);
-            this.guna2Button4.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button4.Location = new System.Drawing.Point(296, 3);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(235, 55);
-            this.guna2Button4.TabIndex = 29;
-            this.guna2Button4.Text = "REPORT SELECTED PART";
-            // 
-            // btnDeletePart
-            // 
-            this.btnDeletePart.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDeletePart.BorderRadius = 5;
-            this.btnDeletePart.BorderThickness = 2;
-            this.btnDeletePart.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.btnDeletePart.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
-            this.btnDeletePart.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.btnDeletePart.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDeletePart.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDeletePart.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDeletePart.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDeletePart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDeletePart.FillColor = System.Drawing.Color.Empty;
-            this.btnDeletePart.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePart.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDeletePart.HoverState.CustomBorderColor = System.Drawing.Color.Red;
-            this.btnDeletePart.HoverState.FillColor = System.Drawing.Color.Black;
-            this.btnDeletePart.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnDeletePart.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletePart.Image")));
-            this.btnDeletePart.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDeletePart.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnDeletePart.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnDeletePart.Location = new System.Drawing.Point(563, 3);
-            this.btnDeletePart.Name = "btnDeletePart";
-            this.btnDeletePart.Size = new System.Drawing.Size(235, 55);
-            this.btnDeletePart.TabIndex = 29;
-            this.btnDeletePart.Text = "DELETE SELECTED PART";
-            this.btnDeletePart.Click += new System.EventHandler(this.btnDeletePart_Click);
             // 
             // guna2Button6
             // 
@@ -414,34 +355,94 @@ namespace ABC_Car_Traders.Views.Admin
             this.guna2Button6.TabIndex = 29;
             this.guna2Button6.Text = "<< PREVIOUS";
             // 
-            // guna2Button7
+            // guna2Button4
             // 
-            this.guna2Button7.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button7.BorderRadius = 5;
-            this.guna2Button7.BorderThickness = 2;
-            this.guna2Button7.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button7.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
-            this.guna2Button7.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Button7.FillColor = System.Drawing.Color.Empty;
-            this.guna2Button7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button7.HoverState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button7.HoverState.FillColor = System.Drawing.Color.Black;
-            this.guna2Button7.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button7.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button7.Image")));
-            this.guna2Button7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button7.ImageOffset = new System.Drawing.Point(10, 0);
-            this.guna2Button7.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button7.Location = new System.Drawing.Point(29, 3);
-            this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.Size = new System.Drawing.Size(235, 55);
-            this.guna2Button7.TabIndex = 29;
-            this.guna2Button7.Text = "REPORT ALL PARTS";
+            this.guna2Button4.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Button4.BorderRadius = 5;
+            this.guna2Button4.BorderThickness = 2;
+            this.guna2Button4.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.guna2Button4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
+            this.guna2Button4.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
+            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Button4.FillColor = System.Drawing.Color.Empty;
+            this.guna2Button4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button4.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Button4.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.guna2Button4.HoverState.FillColor = System.Drawing.Color.Black;
+            this.guna2Button4.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
+            this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button4.ImageOffset = new System.Drawing.Point(10, 0);
+            this.guna2Button4.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2Button4.Location = new System.Drawing.Point(296, 3);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.Size = new System.Drawing.Size(235, 55);
+            this.guna2Button4.TabIndex = 29;
+            this.guna2Button4.Text = "REPORT SELECTED PART";
+            // 
+            // btnPrintAllParts
+            // 
+            this.btnPrintAllParts.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnPrintAllParts.BorderRadius = 5;
+            this.btnPrintAllParts.BorderThickness = 2;
+            this.btnPrintAllParts.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.btnPrintAllParts.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
+            this.btnPrintAllParts.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
+            this.btnPrintAllParts.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrintAllParts.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrintAllParts.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPrintAllParts.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPrintAllParts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPrintAllParts.FillColor = System.Drawing.Color.Empty;
+            this.btnPrintAllParts.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintAllParts.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnPrintAllParts.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.btnPrintAllParts.HoverState.FillColor = System.Drawing.Color.Black;
+            this.btnPrintAllParts.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnPrintAllParts.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintAllParts.Image")));
+            this.btnPrintAllParts.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnPrintAllParts.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnPrintAllParts.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnPrintAllParts.Location = new System.Drawing.Point(29, 3);
+            this.btnPrintAllParts.Name = "btnPrintAllParts";
+            this.btnPrintAllParts.Size = new System.Drawing.Size(235, 55);
+            this.btnPrintAllParts.TabIndex = 29;
+            this.btnPrintAllParts.Text = "REPORT ALL PARTS";
+            this.btnPrintAllParts.Click += new System.EventHandler(this.btnPrintAllParts_Click);
+            // 
+            // btnDeletePart
+            // 
+            this.btnDeletePart.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDeletePart.BorderRadius = 5;
+            this.btnDeletePart.BorderThickness = 2;
+            this.btnDeletePart.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.btnDeletePart.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
+            this.btnDeletePart.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
+            this.btnDeletePart.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeletePart.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeletePart.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeletePart.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDeletePart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDeletePart.FillColor = System.Drawing.Color.Empty;
+            this.btnDeletePart.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletePart.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDeletePart.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.btnDeletePart.HoverState.FillColor = System.Drawing.Color.Black;
+            this.btnDeletePart.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnDeletePart.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletePart.Image")));
+            this.btnDeletePart.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDeletePart.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnDeletePart.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnDeletePart.Location = new System.Drawing.Point(563, 3);
+            this.btnDeletePart.Name = "btnDeletePart";
+            this.btnDeletePart.Size = new System.Drawing.Size(235, 55);
+            this.btnDeletePart.TabIndex = 29;
+            this.btnDeletePart.Text = "DELETE SELECTED PART";
+            this.btnDeletePart.Click += new System.EventHandler(this.btnDeletePart_Click);
             // 
             // UC_ManageCarPartsDetailsForm
             // 
@@ -482,7 +483,7 @@ namespace ABC_Car_Traders.Views.Admin
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button btnDeletePart;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
-        private Guna.UI2.WinForms.Guna2Button guna2Button7;
+        private Guna.UI2.WinForms.Guna2Button btnPrintAllParts;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private Guna.UI2.WinForms.Guna2DataGridView dgvCarPartsDetails;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchParts;

@@ -24,5 +24,10 @@ namespace ABC_Car_Traders.Controllers
         {
             return _orderRepository.GetAllOrders();
         }
+
+        public List<OrderItem> GetSingleOrders()
+        {
+            return _orderRepository.GetSingleOrders(7);
+        }
     }
 }
