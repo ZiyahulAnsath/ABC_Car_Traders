@@ -11,6 +11,7 @@ using ABC_Car_Traders.DataAccess;
 using ABC_Car_Traders.Controllers;
 using ABC_Car_Traders.Models;
 
+
 namespace ABC_Car_Traders.Views.Customer
 {
     public partial class UC_SearchCarDetailsForm : UserControl
@@ -23,6 +24,8 @@ namespace ABC_Car_Traders.Views.Customer
         public UC_SearchCarDetailsForm()
         {
             InitializeComponent();
+
+            
             _carRepository = new CarRepository("Data Source=LAPTOP-KGH138OG;Initial Catalog=abc_car_traders;Integrated Security=True");
             originalDataTable = new DataTable();
             LoadCarData();
@@ -110,8 +113,8 @@ namespace ABC_Car_Traders.Views.Customer
                         return;
                     }
 
-                    // Check if the selected customer exists
-                    int customerId = 7; 
+                    int customerId = SessionManager.LoggedInCustomerId; 
+                    string customerName = SessionManager.LoggedInCustomerName; 
                     if (customerId == 0)
                     {
                         MessageBox.Show("Invalid customer.");
@@ -122,7 +125,7 @@ namespace ABC_Car_Traders.Views.Customer
                     OrderItem orderItem = new OrderItem
                     {
                         CustomerID = customerId,
-                        CustomerName = "", 
+                        CustomerName = customerName, 
                         ProductID = productId,
                         ProductName = productName,
                         Model = model,
@@ -147,6 +150,12 @@ namespace ABC_Car_Traders.Views.Customer
             {
                 MessageBox.Show("Please select a row to place an order.");
             }
+        }
+
+        private void btnManageOrderCustomer_Click(object sender, EventArgs e)
+        {
+            UC_OrderType uc = new UC_OrderType();
+            uc.Show();
         }
     }
 }

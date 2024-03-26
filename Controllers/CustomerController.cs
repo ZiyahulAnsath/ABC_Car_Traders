@@ -27,5 +27,15 @@ namespace ABC_Car_Traders.Controllers
         {
             return _customerRepository.GetAllCustomers();
         }
+
+        public int GetCustomerIdByUsername(string username)
+        {
+            return _customerRepository.GetCustomerIdByUsername(username);
+        }
+
+        public string GetCustomerNameById(int customerId)
+        {
+            return _customerRepository.GetCustomerNameById(customerId);
+        }
     }
 }

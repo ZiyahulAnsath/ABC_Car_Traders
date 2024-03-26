@@ -34,7 +34,7 @@ namespace ABC_Car_Traders.Views.Admin
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReportCar = new Guna.UI2.WinForms.Guna2Button();
             this.deleteSelectedVehicle = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -77,33 +77,34 @@ namespace ABC_Car_Traders.Views.Admin
             this.label1.Text = "Manage Car Details";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2Button4
+            // btnReportCar
             // 
-            this.guna2Button4.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button4.BorderRadius = 5;
-            this.guna2Button4.BorderThickness = 2;
-            this.guna2Button4.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
-            this.guna2Button4.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Button4.FillColor = System.Drawing.Color.Empty;
-            this.guna2Button4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button4.HoverState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button4.HoverState.FillColor = System.Drawing.Color.Black;
-            this.guna2Button4.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
-            this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button4.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button4.Location = new System.Drawing.Point(294, 3);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(233, 50);
-            this.guna2Button4.TabIndex = 29;
-            this.guna2Button4.Text = "REPORT SELECTED VEHICLE";
+            this.btnReportCar.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnReportCar.BorderRadius = 5;
+            this.btnReportCar.BorderThickness = 2;
+            this.btnReportCar.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.btnReportCar.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
+            this.btnReportCar.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
+            this.btnReportCar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReportCar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReportCar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReportCar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReportCar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnReportCar.FillColor = System.Drawing.Color.Empty;
+            this.btnReportCar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportCar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnReportCar.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.btnReportCar.HoverState.FillColor = System.Drawing.Color.Black;
+            this.btnReportCar.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnReportCar.Image = ((System.Drawing.Image)(resources.GetObject("btnReportCar.Image")));
+            this.btnReportCar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnReportCar.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnReportCar.Location = new System.Drawing.Point(294, 3);
+            this.btnReportCar.Name = "btnReportCar";
+            this.btnReportCar.Size = new System.Drawing.Size(233, 50);
+            this.btnReportCar.TabIndex = 29;
+            this.btnReportCar.Text = "REPORT SELECTED VEHICLE";
+            this.btnReportCar.Click += new System.EventHandler(this.btnReportCar_Click);
             // 
             // deleteSelectedVehicle
             // 
@@ -179,7 +180,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.66784F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.943463F));
             this.tableLayoutPanel4.Controls.Add(this.guna2Button6, 9, 0);
-            this.tableLayoutPanel4.Controls.Add(this.guna2Button4, 3, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnReportCar, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnPrintAllCars, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.deleteSelectedVehicle, 5, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -472,7 +473,7 @@ namespace ABC_Car_Traders.Views.Admin
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button btnReportCar;
         private Guna.UI2.WinForms.Guna2Button deleteSelectedVehicle;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;

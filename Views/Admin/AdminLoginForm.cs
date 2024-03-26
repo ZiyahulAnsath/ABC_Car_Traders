@@ -63,14 +63,22 @@ namespace ABC_Car_Traders.Views.Admin
             }
             else if (rbCustomer.Checked)
             {
-                // Check credentials in customer table
                 if (customerController.ValidateCustomerLogin(username, password))
                 {
+                    // Retrieve logged-in customer details from the database based on username
+                    int customerId = customerController.GetCustomerIdByUsername(username);
+                    string customerName = customerController.GetCustomerNameById(customerId);
+
+                    // Store logged-in customer ID and name in the session manager
+                    SessionManager.LoggedInCustomerId = customerId;
+                    SessionManager.LoggedInCustomerName = customerName;
 
                     CustomerDashboard customerDashboard = new CustomerDashboard();
                     customerDashboard.Show();
                     this.Hide();
                 }
+
+
                 else
                 {
                     MessageBox.Show("Invalid username or password for customer.");
@@ -81,8 +89,6 @@ namespace ABC_Car_Traders.Views.Admin
             {
                 MessageBox.Show("Please select user type (admin/customer).");
             }
-
-            //}
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)

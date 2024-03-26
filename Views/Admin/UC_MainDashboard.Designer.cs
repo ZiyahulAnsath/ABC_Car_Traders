@@ -137,8 +137,8 @@ namespace ABC_Car_Traders.Views.Admin
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.205999F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.372F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.205998F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.00999F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.205998F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.23301F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.339806F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1317, 412);
             this.tableLayoutPanel5.TabIndex = 5;
             // 
@@ -154,7 +154,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.gpStatus.Location = new System.Drawing.Point(45, 21);
             this.gpStatus.Margin = new System.Windows.Forms.Padding(0);
             this.gpStatus.Name = "gpStatus";
-            this.gpStatus.Size = new System.Drawing.Size(378, 174);
+            this.gpStatus.Size = new System.Drawing.Size(378, 173);
             this.gpStatus.TabIndex = 11;
             // 
             // splitContainer4
@@ -174,7 +174,7 @@ namespace ABC_Car_Traders.Views.Admin
             // 
             this.splitContainer4.Panel2.Controls.Add(this.guna2CirclePictureBox1);
             this.splitContainer4.Panel2MinSize = 70;
-            this.splitContainer4.Size = new System.Drawing.Size(378, 174);
+            this.splitContainer4.Size = new System.Drawing.Size(378, 173);
             this.splitContainer4.SplitterDistance = 240;
             this.splitContainer4.TabIndex = 0;
             // 
@@ -246,7 +246,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.gpStatusModels.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
             this.gpStatusModels.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
             this.gpStatusModels.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
-            this.gpStatusModels.Location = new System.Drawing.Point(48, 219);
+            this.gpStatusModels.Location = new System.Drawing.Point(48, 218);
             this.gpStatusModels.Name = "gpStatusModels";
             this.gpStatusModels.Size = new System.Drawing.Size(372, 167);
             this.gpStatusModels.TabIndex = 11;
@@ -342,7 +342,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.gpStatusParts.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
             this.gpStatusParts.Location = new System.Drawing.Point(471, 24);
             this.gpStatusParts.Name = "gpStatusParts";
-            this.gpStatusParts.Size = new System.Drawing.Size(372, 168);
+            this.gpStatusParts.Size = new System.Drawing.Size(372, 167);
             this.gpStatusParts.TabIndex = 11;
             // 
             // splitContainer2
@@ -362,7 +362,7 @@ namespace ABC_Car_Traders.Views.Admin
             // 
             this.splitContainer2.Panel2.Controls.Add(this.guna2CirclePictureBox4);
             this.splitContainer2.Panel2MinSize = 70;
-            this.splitContainer2.Size = new System.Drawing.Size(372, 168);
+            this.splitContainer2.Size = new System.Drawing.Size(372, 167);
             this.splitContainer2.SplitterDistance = 228;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -436,7 +436,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.gpStatusCustomer.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
             this.gpStatusCustomer.Location = new System.Drawing.Point(894, 24);
             this.gpStatusCustomer.Name = "gpStatusCustomer";
-            this.gpStatusCustomer.Size = new System.Drawing.Size(372, 168);
+            this.gpStatusCustomer.Size = new System.Drawing.Size(372, 167);
             this.gpStatusCustomer.TabIndex = 11;
             // 
             // splitContainer3
@@ -456,7 +456,7 @@ namespace ABC_Car_Traders.Views.Admin
             // 
             this.splitContainer3.Panel2.Controls.Add(this.guna2CirclePictureBox5);
             this.splitContainer3.Panel2MinSize = 70;
-            this.splitContainer3.Size = new System.Drawing.Size(372, 168);
+            this.splitContainer3.Size = new System.Drawing.Size(372, 167);
             this.splitContainer3.SplitterDistance = 249;
             this.splitContainer3.TabIndex = 0;
             // 
@@ -528,7 +528,7 @@ namespace ABC_Car_Traders.Views.Admin
             this.gpStatusOrders.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
             this.gpStatusOrders.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(26)))), ((int)(((byte)(85)))));
             this.gpStatusOrders.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
-            this.gpStatusOrders.Location = new System.Drawing.Point(471, 219);
+            this.gpStatusOrders.Location = new System.Drawing.Point(471, 218);
             this.gpStatusOrders.Name = "gpStatusOrders";
             this.gpStatusOrders.Size = new System.Drawing.Size(372, 167);
             this.gpStatusOrders.TabIndex = 11;

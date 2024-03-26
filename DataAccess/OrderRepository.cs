@@ -75,7 +75,7 @@ namespace ABC_orderItem_Traders.DataAccess
 
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string query = "SELECT * FROM Orders WHERE CustomerID = @CustomerID";
+                string query = "SELECT OrderID, ProductID, ProductName, Model, Brand, Price, OrderDate, Status FROM Orders WHERE CustomerID = @CustomerID";
 
                 // Append the WHERE clause to filter based on the search query
                 if (!string.IsNullOrEmpty(searchQuery))
@@ -102,8 +102,8 @@ namespace ABC_orderItem_Traders.DataAccess
                             OrderItem order = new OrderItem
                             {
                                 OrderID = reader.GetInt32(reader.GetOrdinal("OrderID")),
-                                CustomerID = reader.GetInt32(reader.GetOrdinal("CustomerID")),
-                                CustomerName = reader.GetString(reader.GetOrdinal("CustomerName")),
+                                //CustomerID = reader.GetInt32(reader.GetOrdinal("CustomerID")),
+                                //CustomerName = reader.GetString(reader.GetOrdinal("CustomerName")),
                                 ProductID = reader.GetInt32(reader.GetOrdinal("ProductID")),
                                 ProductName = reader.GetString(reader.GetOrdinal("ProductName")),
                                 Model = reader.GetString(reader.GetOrdinal("Model")),

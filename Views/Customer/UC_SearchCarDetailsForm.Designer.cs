@@ -44,7 +44,7 @@ namespace ABC_Car_Traders.Views.Customer
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.btnCarOrder = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnManageOrderCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -262,7 +262,7 @@ namespace ABC_Car_Traders.Views.Customer
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.66784F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.943463F));
             this.tableLayoutPanel4.Controls.Add(this.btnCarOrder, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.guna2Button3, 3, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnManageOrderCustomer, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.guna2Button6, 9, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 28);
@@ -304,33 +304,34 @@ namespace ABC_Car_Traders.Views.Customer
             this.btnCarOrder.Text = "SELECTED CAR ORDER";
             this.btnCarOrder.Click += new System.EventHandler(this.btnCarOrder_Click);
             // 
-            // guna2Button3
+            // btnManageOrderCustomer
             // 
-            this.guna2Button3.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button3.BorderRadius = 5;
-            this.guna2Button3.BorderThickness = 2;
-            this.guna2Button3.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
-            this.guna2Button3.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Button3.FillColor = System.Drawing.Color.Empty;
-            this.guna2Button3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button3.HoverState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button3.HoverState.FillColor = System.Drawing.Color.Black;
-            this.guna2Button3.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button3.ImageOffset = new System.Drawing.Point(10, 0);
-            this.guna2Button3.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button3.Location = new System.Drawing.Point(298, 3);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(237, 63);
-            this.guna2Button3.TabIndex = 29;
-            this.guna2Button3.Text = "MANAGE CAR ORDER";
+            this.btnManageOrderCustomer.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnManageOrderCustomer.BorderRadius = 5;
+            this.btnManageOrderCustomer.BorderThickness = 2;
+            this.btnManageOrderCustomer.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.btnManageOrderCustomer.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
+            this.btnManageOrderCustomer.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
+            this.btnManageOrderCustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageOrderCustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageOrderCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnManageOrderCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnManageOrderCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnManageOrderCustomer.FillColor = System.Drawing.Color.Empty;
+            this.btnManageOrderCustomer.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageOrderCustomer.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnManageOrderCustomer.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.btnManageOrderCustomer.HoverState.FillColor = System.Drawing.Color.Black;
+            this.btnManageOrderCustomer.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnManageOrderCustomer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnManageOrderCustomer.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnManageOrderCustomer.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnManageOrderCustomer.Location = new System.Drawing.Point(298, 3);
+            this.btnManageOrderCustomer.Name = "btnManageOrderCustomer";
+            this.btnManageOrderCustomer.Size = new System.Drawing.Size(237, 63);
+            this.btnManageOrderCustomer.TabIndex = 29;
+            this.btnManageOrderCustomer.Text = "MANAGE CAR ORDER";
+            this.btnManageOrderCustomer.Click += new System.EventHandler(this.btnManageOrderCustomer_Click);
             // 
             // guna2Button6
             // 
@@ -395,7 +396,7 @@ namespace ABC_Car_Traders.Views.Customer
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private Guna.UI2.WinForms.Guna2Button btnCarOrder;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btnManageOrderCustomer;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchCar;
     }

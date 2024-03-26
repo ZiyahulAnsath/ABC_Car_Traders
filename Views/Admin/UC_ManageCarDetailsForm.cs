@@ -215,5 +215,11 @@ namespace ABC_Car_Traders.Views.Admin
         {
             allVehicles(); 
         }
+
+        private void btnReportCar_Click(object sender, EventArgs e)
+        {
+            ReportViewer report = new ReportViewer();
+            report.Show();
+        }
     }
 }

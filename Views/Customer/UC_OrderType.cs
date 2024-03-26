@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ABC_Car_Traders.Controllers;
 using ABC_orderItem_Traders.DataAccess;
 using ABC_Car_Traders.Models;
 
@@ -30,8 +31,17 @@ namespace ABC_Car_Traders.Views.Customer
         {
             try
             {
-                // Dynamically set the Customer Id
-                originalDataTable = ToDataTable(_orderRepository.GetSingleOrders(customerID: 7));
+                int customerID = SessionManager.LoggedInCustomerId;
+                originalDataTable = ToDataTable(_orderRepository.GetSingleOrders(customerID));
+
+                // Hide CustomerID column if it exists
+                if (originalDataTable.Columns.Contains("CustomerID"))
+                    originalDataTable.Columns["CustomerID"].ColumnMapping = MappingType.Hidden;
+
+                // Hide CustomerName column if it exists
+                if (originalDataTable.Columns.Contains("CustomerName"))
+                    originalDataTable.Columns["CustomerName"].ColumnMapping = MappingType.Hidden;
+
                 dgvCustomerOrder.DataSource = originalDataTable;
             }
             catch (Exception ex)
@@ -46,20 +56,57 @@ namespace ABC_Car_Traders.Views.Customer
             DataTable table = new DataTable();
             foreach (var prop in typeof(T).GetProperties())
             {
-                table.Columns.Add(prop.Name);
+                DataColumn column;
+                if (prop.Name == "Status")
+                {
+                    // Convert integer status to string representation
+                    column = new DataColumn("Status", typeof(string));
+                }
+                else
+                {
+                    column = new DataColumn(prop.Name);
+                }
+                table.Columns.Add(column);
             }
 
+            // Populate rows with data
             foreach (T item in data)
             {
                 DataRow row = table.NewRow();
                 foreach (var prop in typeof(T).GetProperties())
                 {
-                    object value = prop.GetValue(item);
-                    row[prop.Name] = value ?? DBNull.Value;
+                    if (prop.Name == "Status")
+                    {
+                        // Convert integer status to string representation
+                        object value = prop.GetValue(item);
+                        int status = (int)value;
+                        string statusString = GetStatusString(status);
+                        row["Status"] = statusString;
+                    }
+                    else
+                    {
+                        object value = prop.GetValue(item);
+                        row[prop.Name] = value ?? DBNull.Value;
+                    }
                 }
                 table.Rows.Add(row);
             }
             return table;
+        }
+
+        private string GetStatusString(int status)
+        {
+            switch (status)
+            {
+                case 0:
+                    return "Pending";
+                case 1:
+                    return "Success";
+                case 2:
+                    return "Cancel";
+                default:
+                    return "Unknown";
+            }
         }
 
         private void btnCancelOrder_Click(object sender, EventArgs e)

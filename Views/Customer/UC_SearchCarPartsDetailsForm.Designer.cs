@@ -30,9 +30,9 @@ namespace ABC_Car_Traders.Views.Customer
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_SearchCarPartsDetailsForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label = new System.Windows.Forms.Label();
@@ -42,7 +42,7 @@ namespace ABC_Car_Traders.Views.Customer
             this.dgvCarPartsDetails = new Guna.UI2.WinForms.Guna2DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCarPartsOrder = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.panel2.SuspendLayout();
@@ -92,11 +92,11 @@ namespace ABC_Car_Traders.Views.Customer
             this.label.AutoSize = true;
             this.label.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.ForeColor = System.Drawing.Color.Cyan;
-            this.label.Location = new System.Drawing.Point(90, 33);
+            this.label.Location = new System.Drawing.Point(93, 20);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(179, 27);
+            this.label.Size = new System.Drawing.Size(173, 54);
             this.label.TabIndex = 26;
-            this.label.Text = "Search the Car:";
+            this.label.Text = "Search the Car Parts:";
             this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtSearchCarPart
@@ -170,28 +170,28 @@ namespace ABC_Car_Traders.Views.Customer
             // 
             // dgvCarPartsDetails
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvCarPartsDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgvCarPartsDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCarPartsDetails.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvCarPartsDetails.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCarPartsDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCarPartsDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCarPartsDetails.ColumnHeadersHeight = 40;
             this.dgvCarPartsDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCarPartsDetails.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCarPartsDetails.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCarPartsDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCarPartsDetails.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvCarPartsDetails.Location = new System.Drawing.Point(3, 33);
@@ -252,7 +252,7 @@ namespace ABC_Car_Traders.Views.Customer
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.943463F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.66784F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.943463F));
-            this.tableLayoutPanel4.Controls.Add(this.guna2Button2, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnCarPartsOrder, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.guna2Button3, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.guna2Button6, 9, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -266,33 +266,34 @@ namespace ABC_Car_Traders.Views.Customer
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1341, 168);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
-            // guna2Button2
+            // btnCarPartsOrder
             // 
-            this.guna2Button2.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button2.BorderRadius = 5;
-            this.guna2Button2.BorderThickness = 2;
-            this.guna2Button2.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
-            this.guna2Button2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Button2.FillColor = System.Drawing.Color.Empty;
-            this.guna2Button2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button2.HoverState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.Black;
-            this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button2.ImageOffset = new System.Drawing.Point(10, 0);
-            this.guna2Button2.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button2.Location = new System.Drawing.Point(29, 3);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(230, 62);
-            this.guna2Button2.TabIndex = 29;
-            this.guna2Button2.Text = "SELECTED PARTS ORDER";
+            this.btnCarPartsOrder.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCarPartsOrder.BorderRadius = 5;
+            this.btnCarPartsOrder.BorderThickness = 2;
+            this.btnCarPartsOrder.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.btnCarPartsOrder.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(15)))), ((int)(((byte)(43)))));
+            this.btnCarPartsOrder.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 6, 0);
+            this.btnCarPartsOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCarPartsOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCarPartsOrder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCarPartsOrder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCarPartsOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCarPartsOrder.FillColor = System.Drawing.Color.Empty;
+            this.btnCarPartsOrder.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCarPartsOrder.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCarPartsOrder.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.btnCarPartsOrder.HoverState.FillColor = System.Drawing.Color.Black;
+            this.btnCarPartsOrder.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnCarPartsOrder.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnCarPartsOrder.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnCarPartsOrder.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnCarPartsOrder.Location = new System.Drawing.Point(29, 3);
+            this.btnCarPartsOrder.Name = "btnCarPartsOrder";
+            this.btnCarPartsOrder.Size = new System.Drawing.Size(230, 62);
+            this.btnCarPartsOrder.TabIndex = 29;
+            this.btnCarPartsOrder.Text = "SELECTED PARTS ORDER";
+            this.btnCarPartsOrder.Click += new System.EventHandler(this.btnCarPartsOrder_Click);
             // 
             // guna2Button3
             // 
@@ -384,7 +385,7 @@ namespace ABC_Car_Traders.Views.Customer
         private Guna.UI2.WinForms.Guna2DataGridView dgvCarPartsDetails;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnCarPartsOrder;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchCarPart;

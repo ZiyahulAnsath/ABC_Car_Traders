@@ -180,20 +180,6 @@ namespace ABC_Car_Traders.DataAccess
         }
 
 
-        // Get customer ID by username
-        //public int GetCustomerIdByUsername(string username)
-        //{
-        //    using (var connection = new SqlConnection(connectionString))
-        //    {
-        //        connection.Open();
-        //        var query = "SELECT CustomerID FROM Customers WHERE Username = @Username";
-        //        using (var command = new SqlCommand(query, connection))
-        //        {
-        //            command.Parameters.AddWithValue("@Username", username);
-        //            return (int)command.ExecuteScalar();
-        //        }
-        //    }
-        //}
 
         public int GetCustomerIdByUsername(string username)
         {
@@ -211,11 +197,36 @@ namespace ABC_Car_Traders.DataAccess
                     }
                     else
                     {
+                        // Handle case where username is not found
                         throw new ArgumentException("Username not found.");
                     }
                 }
             }
         }
+
+        public string GetCustomerNameById(int customerId)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                var query = "SELECT Name FROM Customers WHERE CustomerID = @CustomerID";
+                using (var command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@CustomerID", customerId);
+                    var result = command.ExecuteScalar();
+                    if (result != null)
+                    {
+                        return result.ToString();
+                    }
+                    else
+                    {
+                        // Handle case where customer ID is not found
+                        throw new ArgumentException("Customer ID not found.");
+                    }
+                }
+            }
+        }
+
 
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ABC_Car_Traders.Views.Admin;
+using ABC_Car_Traders.Controllers;
 
 namespace ABC_Car_Traders.Views.Customer
 {
@@ -17,6 +18,18 @@ namespace ABC_Car_Traders.Views.Customer
         public CustomerDashboard()
         {
             InitializeComponent();
+
+
+            //Stored Session manager
+            //if (SessionManager.LoggedInCustomerId != 0)
+            //{
+            //    label2.Text = "Welcome, ID: " + SessionManager.LoggedInCustomerId;
+            //}
+            if (SessionManager.LoggedInCustomerName != null)
+            {
+                lblHeading.Text = "Welcome To ABC Car Traders: " + SessionManager.LoggedInCustomerName;
+            }
+
             UC_CustomerDashboard uc = new UC_CustomerDashboard();
             addUserControl(uc);
         }
@@ -60,6 +73,9 @@ namespace ABC_Car_Traders.Views.Customer
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            // Clear the session
+            SessionManager.LoggedInCustomerName = null;
+
             this.Hide();
             AdminLoginForm login = new AdminLoginForm();
             login.Show();
